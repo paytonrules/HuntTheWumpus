@@ -1,0 +1,9 @@
+If the duration is the only field entered, the screen should stay in the initial state.  It should not move to the "simple appointment" state.
+
+|set duration|1|
+
+|check |duration|1|
+|check |name||
+|check |start date||
+
+!include .DateBook.AssertionPages.WidgetsInInitialState

@@ -1,0 +1,4 @@
+Put the screen into simple state from initial state.
+|set name|bob|
+|set start date|12/5/1952|
+|set duration|2|

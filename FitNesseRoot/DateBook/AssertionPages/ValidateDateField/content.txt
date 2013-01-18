@@ -1,0 +1,6 @@
+This assertion suite makes sure that a date field is validated correctly.
+
+|!3 ^RejectInvalidDateSyntax|
+|!3 ^RejectInvalidDateSemantics|
+|!3 ^AllowGoodDate|
+|!3 ^AllowBlankDate|

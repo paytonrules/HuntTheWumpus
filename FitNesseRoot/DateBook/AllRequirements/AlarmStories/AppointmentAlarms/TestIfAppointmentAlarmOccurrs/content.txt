@@ -1,0 +1,27 @@
+|set date|4/11/2006 13:20|
+
+!|AddAppointment|
+|start     |durationMinutes|subject|recurrence|endRecurrence|alarm|alarmWarning|
+|04/11/2006 13:30|60             |test   |NONE      |null         |true |3           |
+
+|ensure|set date|4/16/2006|time|13:30|
+
+
+|not|alarm notification active|
+
+|note|One minute too early|
+|set date|4/11/2006 13:26|
+
+|not|alarm notification active|
+
+|set date|4/11/2006 13:27|
+
+|ensure|alarm notification active|
+|check|alarm notification name|test|
+|check|alarm notification date|4/11/2006 13:30|
+|ensure|alarm notification dismiss enabled|
+
+|dismiss alarm notifiaction|
+
+|not|alarm notification active|
+

@@ -1,0 +1,39 @@
+Check obvious stuff.
+|reject|${setdate}|00/00/0000|
+|reject|${setdate}|11/00/0000|
+|reject|${setdate}|11/11/0000|
+|reject|${setdate}|11/00/1952|
+|reject|${setdate}|13/11/1952|
+|reject|${setdate}|11/32/1952|
+
+Check year boundaries.  No dates < 1900 or > 2100.
+
+|reject|${setdate}|11/1/1899|
+|reject|${setdate}|11/1/2101|
+
+Check months
+
+|reject|${setdate}|1/32/1951|
+|reject|${setdate}|2/29/1951|
+|reject|${setdate}|3/32/1951|
+|reject|${setdate}|4/31/1951|
+|reject|${setdate}|5/32/1951|
+|reject|${setdate}|6/31/1951|
+|reject|${setdate}|7/32/1951|
+|reject|${setdate}|8/32/1951|
+|reject|${setdate}|9/31/1951|
+|reject|${setdate}|10/32/1951|
+|reject|${setdate}|11/31/1951|
+|reject|${setdate}|12/32/1951|
+
+Check Leap years.
+
+|reject|${setdate}|2/30/1960|
+|reject|${setdate}|2/29/1900|
+|reject|${setdate}|2/30/2000|
+
+
+
+
+
+

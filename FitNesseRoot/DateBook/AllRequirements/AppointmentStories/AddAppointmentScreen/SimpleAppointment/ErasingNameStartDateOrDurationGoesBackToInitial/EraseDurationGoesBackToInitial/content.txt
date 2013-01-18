@@ -1,0 +1,11 @@
+From Simple state, if we clear the duration, we should go back to Initial state.
+
+!include .DateBook.CommandPages.GoToSimpleState
+
+|set duration||
+
+|check |duration||
+|check |name|bob|
+|check |start date|5, Dec 1952|
+
+!include .DateBook.AssertionPages.WidgetsInInitialState

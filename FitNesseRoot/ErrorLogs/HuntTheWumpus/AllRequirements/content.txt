@@ -1,0 +1,5 @@
+!3 !-fit:fit.FitServer-!
+|'''Date: '''|!-2:04:06 PM (CST) on Friday, November 28, 2008-!|
+|'''Command: '''|!-java -cp /Users/unclebob/Desktop/SDBP07/HTW2/HTW/classes:/Users/unclebob/Desktop/SDBP07/HTW2/fitnesse/fitlibrary.jar:fitnesse.jar:fitlibrary.jar fit.FitServer BobsMacbook.local 8080 10-!|
+|'''Exit code: '''|!-12-!|
+|'''Time elapsed: '''|!-1.668 seconds-!|

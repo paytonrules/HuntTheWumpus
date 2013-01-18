@@ -1,0 +1,4 @@
+|'''Date: '''|!-4:07:11 PM (CDT) on Monday, September 3, 2007-!|
+|'''Command: '''|!-java -cp /Projects/AtmMachine:fitnesse.jar:fitlibrary.jar fit.FitServer BobsMacbook.local 8081 11-!|
+|'''Exit code: '''|!-7-!|
+|'''Time elapsed: '''|!-1.715 seconds-!|

@@ -1,0 +1,4 @@
+|'''Date: '''|!-4:08:14 PM (CDT) on Thursday, October 20, 2005-!|
+|'''Command: '''|!-java -cp ..\classes;fitnesse.jar;fitlibrary.jar fit.FitServer localhost 80 64-!|
+|'''Exit code: '''|!-0-!|
+|'''Time elapsed: '''|!-0.621 seconds-!|

@@ -1,0 +1,17 @@
+|ensure|name is enabled|
+|ensure|start time is enabled|
+|ensure|duration is enabled|
+|ensure|cancel is enabled|
+
+|not   |ok is enabled|
+|not   |repeats is enabled|
+|not   |daily is enabled|
+|not   |weekly is enabled|
+|not   |monthly is enabled|
+|not   |last repetition is enabled|
+|not   |alarm is enabled|
+|not   |minutes before is enabled|
+|not   |contacts is enabled|
+|not   |attendees is enabled|
+|not   |invite is enabled|
+|not   |uninvite is enabled|

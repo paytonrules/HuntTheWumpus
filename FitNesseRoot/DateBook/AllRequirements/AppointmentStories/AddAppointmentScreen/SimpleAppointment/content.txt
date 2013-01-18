@@ -1,0 +1,11 @@
+The screen moves to the "Simple Appointment State" if the name, start date, and duration are all valid.  In this state the OK, Repeats, Alarm, and Contacts widgets are activated.  
+
+|!3 ^JustNameIsntSimple|
+|!3 ^JustStartDateIsntSimple|
+|!3 ^JustDurationIsntSimple|
+|!3 ^JustNameAndStartDateIsntSimple|
+|!3 ^JustNameAndDurationIsntSimple|
+|!3 ^JustStartDateAndDurationIsntSimple|
+|!3 ^NameStartDateAndDurationIsSimple|
+|!3 ^ErasingNameStartDateOrDurationGoesBackToInitial|
+

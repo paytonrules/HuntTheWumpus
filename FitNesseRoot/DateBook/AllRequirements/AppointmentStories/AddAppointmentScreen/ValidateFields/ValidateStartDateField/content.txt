@@ -1,0 +1,4 @@
+Validate the start dates.
+!define setdate {set start date}
+
+!contents

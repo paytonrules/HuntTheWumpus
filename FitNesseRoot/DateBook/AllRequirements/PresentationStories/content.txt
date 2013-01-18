@@ -1,0 +1,16 @@
+!3 Stories about fetching and filtering appointments, events, and tasks.
+
+|^GetSimpleAppointments|
+|^GetDailyAppointments|
+|^GetWeeklyAppointments|
+|^GetMonthlyAppointments|
+|---|
+|^GetSimpleEvents|
+|^GetDailyEvents|
+|^GetWeeklyEvents|
+|^GetMonthlyEvents|
+|----|
+|^GetTasks|
+|^GetOverdueTasks|
+|^GetTasksNotDone|
+

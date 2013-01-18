@@ -1,0 +1,30 @@
+Make sure good dates are accepted.
+
+Check year boundaries.
+
+|ensure|${setdate}|1/1/1900|
+|ensure|${setdate}|1/1/2100|
+
+Check last days of month.
+|ensure|${setdate}|1/1/1901|
+|ensure|${setdate}|1/31/1901|
+|ensure|${setdate}|2/28/1901|
+|ensure|${setdate}|3/31/1901|
+|ensure|${setdate}|4/30/1901|
+|ensure|${setdate}|5/31/1901|
+|ensure|${setdate}|6/30/1901|
+|ensure|${setdate}|7/31/1901|
+|ensure|${setdate}|8/31/1901|
+|ensure|${setdate}|9/30/1901|
+|ensure|${setdate}|10/31/1901|
+|ensure|${setdate}|11/30/1901|
+|ensure|${setdate}|12/31/1901|
+
+Check leap years.
+
+|ensure|${setdate}|2/28/1900|
+|ensure|${setdate}|2/29/1904|
+|ensure|${setdate}|2/29/2000|
+
+
+

@@ -1,0 +1,4 @@
+|'''Date: '''|!-7:52:46 AM (CDT) on Wednesday, April 12, 2006-!|
+|'''Command: '''|!-java -cp C:\workspace\TriviaGameFitNesseExample\;fitnesse.jar;fitlibrary.jar fit.FitServer localhost 80 4-!|
+|'''Exit code: '''|!-5-!|
+|'''Time elapsed: '''|!-0.942 seconds-!|

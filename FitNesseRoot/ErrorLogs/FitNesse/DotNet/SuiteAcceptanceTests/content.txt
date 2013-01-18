@@ -1,0 +1,22 @@
+|'''Date: '''|!-7:48:35 AM (CDT) on Wednesday, June 6, 2007-!|
+|'''Command: '''|!-C:\fitnesse20050405\fitnesse\dotnet\FitServer.exe fitnesse.jar;fitlibrary.jar;c:\views\iig\iigweb\pr\iig\bin\BusinessObjects.dll;C:\Views\IIG\IIGWeb\BusinessObjects\bin\BusinessObjects.dll.config BobsMacbook.local 8080 20-!|
+|'''Exit code: '''|!--1-!|
+|'''Time elapsed: '''|!--1.181134115934E9 seconds-!|
+----'''Internal Exception:'''
+{{{ java.io.IOException: C:\fitnesse20050405\fitnesse\dotnet\FitServer.exe: not found
+	java.lang.UNIXProcess.forkAndExec(Native Method)
+	java.lang.UNIXProcess.<init>(UNIXProcess.java:52)
+	java.lang.ProcessImpl.start(ProcessImpl.java:91)
+	java.lang.ProcessBuilder.start(ProcessBuilder.java:451)
+	java.lang.Runtime.exec(Runtime.java:591)
+	java.lang.Runtime.exec(Runtime.java:429)
+	java.lang.Runtime.exec(Runtime.java:326)
+	fitnesse.components.CommandRunner.start(CommandRunner.java:37)
+	fitnesse.components.CommandRunningFitClient.start(CommandRunningFitClient.java:33)
+	fitnesse.responders.run.TestResponder.startFitClient(TestResponder.java:93)
+	fitnesse.responders.run.TestResponder.doSending(TestResponder.java:42)
+	fitnesse.responders.ChunkingResponder.startSending(ChunkingResponder.java:61)
+	fitnesse.responders.ChunkingResponder.access$000(ChunkingResponder.java:10)
+	fitnesse.responders.ChunkingResponder$RespondingRunnable.run(ChunkingResponder.java:107)
+	java.lang.Thread.run(Thread.java:613)
+}}}

@@ -1,0 +1,6 @@
+!|fitlibrary.DoFixture|
+|start|datebook.fixtures.DateBookController|
+
+!|Import|
+|fit|
+|datebook.fixtures|

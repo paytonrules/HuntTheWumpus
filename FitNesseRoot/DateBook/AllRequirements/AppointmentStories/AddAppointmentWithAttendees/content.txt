@@ -1,0 +1,17 @@
+!|Add Appointment|
+|start     |durationMinutes|subject|recurrence|endRecurrence|alarm|alarmWarning|=id?|
+|04/11/2006|60             |test   |NONE      |null         |true |0           |appt|
+
+!|Add Attendees|
+|id= |name      |email    |phone  |
+|appt|Bob Martin|ub@bu.com|5551212|
+|appt|Bill Burt |bb@bu.com|5557777|
+
+!|Get Appointments|
+|start     |durationMinutes|subject|recurrence|endRecurrence|alarm|alarmWarning|attendees?|
+|04/11/2006|60             |test   |NONE      |null         |true |0           |2         |
+
+!|Get attendees.|appt|
+|name      |email    |phone  |
+|Bob Martin|ub@bu.com|5551212|
+|Bill Burt |bb@bu.com|5557777|

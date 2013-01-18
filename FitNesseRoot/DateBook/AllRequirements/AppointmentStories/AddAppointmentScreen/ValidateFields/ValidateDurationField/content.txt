@@ -1,0 +1,19 @@
+Make sure the duration field is valid.
+
+|reject|set duration|-1|
+|reject|set duration|X|
+|reject|set duration|.|
+
+Can't set duration > 24 hours.
+|reject|set duration|1441|
+
+Valid durations.
+|ensure|set duration|1|
+|ensure|set duration|1440|
+|check|duration|1440|
+
+Should be able to set duration to blank
+|ensure|set duration||
+|check|duration||
+
+

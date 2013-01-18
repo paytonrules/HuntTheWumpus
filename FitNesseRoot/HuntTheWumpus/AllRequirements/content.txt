@@ -1,0 +1,11 @@
+The project will be run in very short iterations.  
+
+|'''^IterationOne'''|Current Requirements.|
+
+''Change the paths below to the appropriate locations.''
+|''The output directory of the IDE.  The place where all the .class files are created.''|
+!path /Users/unclebob/Desktop/SDBP07/HTW2/HTW/classes
+|''Find fitlibrary in the fitnesse/lib directory''|
+!path /Users/unclebob/Desktop/SDBP07/HTW2/fitnesse/fitlibrary.jar
+
+

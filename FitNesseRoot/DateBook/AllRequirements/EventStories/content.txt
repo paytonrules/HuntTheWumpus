@@ -1,0 +1,11 @@
+!3 Stories about Events
+
+|^AddSimpleEvent|
+|^AddAllDayEvent|
+|^AddEventWithAlarm|
+|^AddDailyEvent|
+|^AddWeeklyEvent|
+|^AddMonthlyEvent|
+|^AddYearlyEvent|
+|^AddEventWithAlarm|
+|^AddRecurringEventWithAlarm|

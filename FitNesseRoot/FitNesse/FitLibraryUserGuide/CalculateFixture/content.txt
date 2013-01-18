@@ -1,0 +1,23 @@
+CalculateFixture is for testing calculations, like ''!-ColumnFixture-!''. CalculateFixture was introduced to explore a few ideas.
+ * It's minimalistic, in the sense that there are no (default) special values, such as " " and "error", as used in ''!-ColumnFixture-!''. Such special values can be explicitly defined in the fixture code.
+ * It distinguishes between the ''given'' values and the ''expected'' values by using a blank column to separate the ''givens'' on the left side and the ''expecteds'' on the right.
+ * It allows any characters in the second (header) row, including unicode.
+ * It can simplify ^WritingFixtures in some cases.
+|!-CalculatedDiscount-!|
+|''$''||''discount''|
+|0.00||0.00|
+|1000.00||0.00|
+|1010.00||50.50|
+|1100.00||55.00|
+|1200.00||60.00|
+|2000.00||100.00|
+ * Here's a table that uses Japanese:
+|!-CalculateCredit3-!|
+|!-&#26376;&#25968;-!|!-&#20449;&#38972;&#24230;-!|!-&#27531;&#39640;-!||!-&#12463;&#12524;&#12472;&#12483;&#12488;&#12434;&#35377;&#21487;&#12377;&#12427;-!|!-&#12463;&#12524;&#12472;&#12483;&#12488;&#12398;&#38480;&#24230;-!|
+|14|!-&#30495;-!|5000.00||!-&#30495;-!|1000.00|
+|''0''|!-&#30495;-!|0.00||!-&#20605;-!|0.00|
+|24|''!-&#20605;-!''|0.00||!-&#20605;-!|0.00|
+|18|!-&#30495;-!|''6000.00''||!-&#20605;-!|0.00|
+|''12''|!-&#30495;-!|5500.00||!-&#30495;-!|1000.00|
+---- * ''Copyright (c) 2004 Rick Mugridge, University of Auckland, New Zealand.''
+ * ''Released under the terms of the GNU General Public License version 2 or later.''

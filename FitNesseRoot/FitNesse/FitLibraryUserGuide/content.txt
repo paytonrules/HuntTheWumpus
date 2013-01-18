@@ -1,0 +1,52 @@
+The ''!-FitLibrary-!'' consists of several fixtures that work together.  There are several interesting features of the ''!-FitLibrary-!'' fixtures:
+ * ^DoFixture tables are compact and flexible for writing workflow tests
+ * The fixtures can operate directly on application objects, in a ''Domain Drven Design'' way, without the need to write fixtures. 
+ * The fixtures support various "graphical" values, including HTML lists and images
+!|fit.specify.DoTree|
+
+|check|tree|!-<ul><li>a</li><li>BB</li></ul>-!|
+ * The fixtures completely avoid magic values, such as "error"
+For each of the ''!-FitLibrary-!'' fixtures, we show some example tables and the corresponding fixture code:
+!3 Fixtures for actions (workflow):
+ * ^DoFixture
+ * ^SequenceFixture (mostly the same as ^DoFixture)
+!3 Fixtures for lists:
+ * ^ArrayFixture for ordered lists
+ * ^SetFixture for unordered lists
+ * ^SubsetFixture for parts of unordered lists
+ * ^ParamRowFixture to simplify the use of ''!-RowFixture-!'' with other ''!-FitLibrary-!'' fixtures
+!3 Fixture for calculations:
+ * ^CalculateFixture
+!3 Fixture for set up:
+ * ^SetUpFixture
+!3 Fixture for testing grids
+ * ^GridFixture
+ * ^ImageFixture is a subclass of ^GridFixture
+!3 Fixture for comparing files and directories
+ * ^FileCompareFixture
+!3 Support for Graphics
+ * Core Fit handles textual values in the cells of a table. These values are converted automatically into primitive values, such as 12, and into objects, such as a ''Date''.
+ * The ''!-FitLibrary-!'' fixtures also support "graphical" values:
+  * ^TreeList uses HTML lists
+  * ^ImageNameGraphic uses HTML image names
+  * ^DotGraphics uses HTML images and associated Dot files
+  * I've just added support for embedded tables as values, which will be documented in the next release. That will be used to specify tests for fixtures more directly than ''!-FixtureFixture-!'', for example.
+ * This general visual capability is described in ''Ubiquitous Visual Languages'', a paper which is under construction.
+!3 ''!-FolderRunner-!'' (only in ''!-FitLibraryForFit-!'')
+ * ''^FolderRunner'' runs Fit tests. It handles test suites, organised in directories (folders). It can handle both HTML and XLS spreadsheet files.
+ * The ''^FolderRunnerBrowser'' provides a GUI to run tests and to view the reports.
+!3 Support for !-FitJava-! and ''!-FitNesse-!'' (Java)
+ * The ''!-FitLibrary-!'' fixtures are supported in both !-FitJava-! and !-FitNesse-! in Java
+ * Versions in other languages are not yet available
+!3 Further Information
+ * Further information will be made available at http://www.cs.auckland.ac.nz/~rick/FitLibrary.
+ * Many examples of the development of Fit tables using the core and the ''!-FitLibrary-!'' fixtures, etc are covered in ''Fit for Developing Software'', Rick Mugridge and Ward Cunningham, Prentice-Hall, 2005.
+!3 Planned Changes
+ * I am in the process of generalising the support for graphics (and other non-String values)
+ * I'm experimenting with some extensions to ''!-DoFixture-!''.
+
+---- * ''Copyright (c) 2004 Rick Mugridge, University of Auckland, New Zealand.''
+ * ''Released under the terms of the GNU General Public License version 2 or later.''
+
+!contents -R
+

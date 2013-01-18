@@ -1,0 +1,5 @@
+!|Add Sales Person|
+|Name|ID|Salary|
+|Bob|7420|3200|
+|Jim|8879|2900|
+|Kay|99  |2950|

@@ -1,0 +1,8 @@
+!|AddAppointment|
+|start     |durationMinutes|subject|recurrence|endRecurrence|alarm|alarmWarning|
+|04/11/2006|60             |test   |NONE      |null         |false|0           |
+
+
+!|GetAppointments|
+|start     |durationMinutes|subject|recurrence|endRecurrence|alarm|alarmWarning|
+|04/11/2006|60             |test   |NONE      |null         |false|0           |

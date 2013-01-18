@@ -1,0 +1,12 @@
+!path ${DateBookPath}
+
+|!3 ^AppointmentStories|
+|!3 ^EventStories|
+|!3 ^TaskStories|
+|!3 ^PresentationStories|
+|!3 ^AlarmStories|
+
+----
+!3 Utilities
+ * SetUp
+ * TearDown

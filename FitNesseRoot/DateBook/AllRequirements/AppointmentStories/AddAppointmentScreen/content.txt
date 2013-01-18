@@ -1,0 +1,8 @@
+!img files/Datebook/addNewAppointmentScreen.JPG
+
+|!3 ^InitialState|''Check the initial state of the screen.  Fields are blank.  Most widgets are disabled.''|
+|!3 ^ValidateFields|''Make sure all fields are validated and interpreted properly.''|
+|!3 ^SimpleAppointment|''After entering name and duration, some widgets should be enabled.''|
+|!3 ^RepeatingAppointment|''After selecting repeat, the repetition control should be enabled.''|
+|!3 ^AppointmentAlarm|''After selecting alarm, the 'Minutes Before' widget should be enabled.''|
+|!3 ^AppointmentAttendees|''Can invite and uninvite attendees.''|

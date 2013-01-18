@@ -1,0 +1,12 @@
+DotGraphics allows graph images to be used in tests in any of the ''!-FitLibrary-!'' fixture. For example, graphs are used in the following ''!-DoFixture-!'' example:
+
+!|fit.specify.DoGraphics|
+
+|show|graph|
+|check|graph|!img http://files/ChatGraph.gif|
+
+See the .FitSpecifications.FixtureSpecifications for other examples.
+
+Details of how this works appear in a paper (in progress) on ''Ubiquitous Visual Languages''. 
+
+This requires that ''Dot'', an open-source graph visualization system, is installed. ''Dot'' is available at http://www.graphviz.org.

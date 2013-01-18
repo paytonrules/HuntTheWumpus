@@ -1,0 +1,25 @@
+Run FolderRunner as follows:
+----{{{java -cp javaFit1.1b.jar;fitLibrayForFit.jar fit.runner.FolderRunner testDiry reportDiry
+}}}----You will need to add to the classpath (''cp'') for any application code that you're testing.
+ * FolderRunner runs ''Fit'' on every file in the ''testDiry'' and writes a report file into the corresponding place in the ''reportDiry''.
+ * For each directory within ''reportDiry'', it creates a file ''reportIndex.html'', which gives the results of the tests in that directory and sub-directories. It also provides links into all of the reports.
+ * FolderRunner  handles both HTML and XLS spreadsheet files.
+!3 Spreadsheet files
+ * FolderRunner uses ''!-SpreadsheetRunner-!'' which in turn uses ''Poi'' to read XLS files.
+ * ''!-SpreadsheetRunner-!'' uses spreadsheet borders to work out where the tables are in the spreadsheet (just the first sheet).
+ * See the directory ''testFolders'' in the distribution of ''!-FitLibrayForFit-!'' for examples of the use of spreadsheet files (these are used in my Fit tests for FolderRunner itself).
+ * Add the poi jar in the classpath when using such files. (Download poi from http://jakarta.apache.org/poi)
+!3 ''!-SetUp-!'' and ''!-TearDown-!''
+The following special files may be in the ''testDiry'' or any of its sub-directories, and are used as follows:
+ * A ''!-SetUp-!'' file is effectively added to the start of each test in the directory (including sub-directories). The file may be ''!-SetUp.htm-!'', ''!-SetUp.html-!'' or ''!-SetUp.xls-!'' (in any mixture of uppercase and lower case).
+ * A ''!-TearDown-!'' file is effectively added to the endof each test in the directory (including sub-directories). The file may be ''!-TearDown.htm-!'', ''!-TearDown.html-!'' or ''!-TearDown.xls-!'' (in any mixture of uppercase and lower case).
+Before running a test, all  ''!-SetUp-!'' files that appear in the current directory and all those above it (up to the level of the ''testDiry'') are (effectively) added to the start of the test. They are added with the top-most first.
+
+All  ''!-TearDown-!'' files that appear in the current directory and all those above it (up to the level of the ''testDiry'') are (effectively) added to the end of the test. They are added with the top-most last.
+
+NB: this differs from the ''!-FitNesse-!'' approach, which only takes the closest ''!-SetUp-!'' or ''!-TearDown-!''.
+!3 Planned changes
+ * Use the foreground colour of spreadsheet cells as well to determine where the tables are.
+ * Look in all sheets of the spreadsheet
+ * Consider handling tables that are side-by-side.
+ * Provide more details to help in the use of spreadsheets.

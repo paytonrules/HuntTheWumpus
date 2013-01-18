@@ -1,0 +1,10 @@
+|check |name||
+|check |start date||
+|check |duration||
+
+!include .DateBook.AssertionPages.WidgetsInInitialState
+
+
+
+
+

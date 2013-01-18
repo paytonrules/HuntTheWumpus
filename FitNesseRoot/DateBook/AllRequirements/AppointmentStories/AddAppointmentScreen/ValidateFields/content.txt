@@ -1,0 +1,12 @@
+This suite of tests makes sure that all the fields on the screen are properly validated.
+
+|!3 ^ValidateNameField|
+|!3 ^ValidateStartDateField|
+|!3 ^ValidateDurationField|
+|!3 ^ValidateLastRepetitionField|
+|!3 ^ValidateMinutesBeforeField|
+
+
+
+
+

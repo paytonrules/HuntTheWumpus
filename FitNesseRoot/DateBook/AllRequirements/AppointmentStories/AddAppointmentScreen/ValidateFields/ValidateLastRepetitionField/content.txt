@@ -1,0 +1,6 @@
+Check the last repetition field.
+
+!define setdate {set last repetition date}
+
+
+!contents

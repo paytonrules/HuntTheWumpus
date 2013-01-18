@@ -1,0 +1,11 @@
+From Simple state, if we clear the start date, we should go back to Initial state.
+
+!include .DateBook.CommandPages.GoToSimpleState
+
+|set start date||
+
+|check |duration|2|
+|check |name|bob|
+|check |start date||
+
+!include .DateBook.AssertionPages.WidgetsInInitialState

@@ -1,0 +1,23 @@
+If the name, start date, and duration are all entered, then the screen goes to the Simple state.
+
+!include .DateBook.CommandPages.GoToSimpleState
+
+
+|ensure|name is enabled|
+|ensure|start time is enabled|
+|ensure|duration is enabled|
+|ensure|cancel is enabled|
+|ensure|ok is enabled|
+|ensure|repeats is enabled|
+|ensure|alarm is enabled|
+|ensure|contacts is enabled|
+|ensure|contactList||
+
+|not   |daily is enabled|
+|not   |weekly is enabled|
+|not   |monthly is enabled|
+|not   |last repetition is enabled|
+|not   |minutes before is enabled|
+|not   |attendees is enabled|
+|not   |invite is enabled|
+|not   |uninvite is enabled|

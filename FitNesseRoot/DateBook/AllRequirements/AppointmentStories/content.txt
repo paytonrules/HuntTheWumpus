@@ -1,0 +1,10 @@
+!3 Stories about appointments
+
+|!3 ^AddSimpleAppointment|
+|!3 ^AddDailyAppointment|
+|!3 ^AddWeeklyAppointment|
+|!3 ^AddMonthlyAppointment|
+|!3 ^AddYearlyAppointment|
+|!3 ^AddAppointmentWithAlarm|
+|!3 ^AddAppointmentWithAttendees|
+|!3 ^AddAppointmentScreen|

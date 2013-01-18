@@ -1,0 +1,17 @@
+Check that the "minutes before alarm" field is validated.
+
+|reject|set minutes before alarm|-1|
+|reject|set minutes before alarm|X|
+|reject|set minutes before alarm|.|
+
+Can't set minutes before alarm > 24 hours.
+|reject|set minutes before alarm|1441|
+
+Valid minutes before alarm.
+|ensure|set minutes before alarm|0|
+|ensure|set minutes before alarm|1440|
+|check|minutes before alarm|1440|
+
+Blank is valid minutes before alarm
+|ensure|set minutes before alarm||
+|check|minutes before alarm||

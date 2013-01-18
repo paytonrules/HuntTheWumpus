@@ -1,0 +1,10 @@
+If the name and start date are the only fields entered, the screen should stay in the initial state.  It should not move to the "simple appointment" state.
+
+|set duration|2|
+|set start date|12/5/1952|
+
+|check |duration|2|
+|check |name||
+|check |start date|5, Dec 1952|
+
+!include .DateBook.AssertionPages.WidgetsInInitialState

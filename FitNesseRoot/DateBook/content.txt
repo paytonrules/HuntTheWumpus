@@ -1,0 +1,25 @@
+!3 !c Overview of Date Book Requirements
+
+This application is the date book application of a Personal Information Manager (PIM) within a cell phone.  It allows users to manage appointments, events, and tasks within a calendar.
+ * Appointments have start and end times.
+  * Appointments may recurr
+   * Daily
+   * Weekly
+   * Monthly
+   * Up to an end date.
+  * Appointments can have alarms.
+   * With a specified warning time in advance of the appointment
+  * Appointments can have attendees
+   * The names of people
+   * Or other resources.
+ * Events have dates and times.
+  * They may be "all day"
+  * They can recurr just as appointments do.
+ * Tasks have a due date.
+  * A task can be marked as done or not done.
+
+|!3 ^AllRequirements|''The topmost page of all the acceptance tests.''|
+|!3 ^AssertionPages|''A group of assertions that can be !included into tests.''|
+|!3 ^CommandPages|''A group of useful commands.''|
+
+!define DateBookPath {../DateBook/classes}

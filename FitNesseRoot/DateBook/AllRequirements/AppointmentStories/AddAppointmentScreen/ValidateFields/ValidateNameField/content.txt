@@ -1,0 +1,4 @@
+This page is a place holder.  There are no validations currently specified for the name field.  
+
+|set name|bob|
+|check|name|bob|
