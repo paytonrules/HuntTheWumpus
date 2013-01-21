@@ -1,6 +1,6 @@
 !|fitlibrary.DoFixture|
-|start|HuntTheWumpus.fixtures.GameDriver|
+|start|HuntTheWumpusDotNet.fixtures.GameDriver|
 
 !|Import|
 |fit|
-|HuntTheWumpus.fixtures|
+|HuntTheWumpusDotNet.fixtures|

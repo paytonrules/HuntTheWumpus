@@ -1,4 +1,7 @@
-|HuntTheWumpus.AllRequirements||14:04:02 Fri, Nov 28, 2008|
+|HuntTheWumpus.SetUp||14:04:34 Mon, Jan 21, 2013|
+|HuntTheWumpus.AllRequirements||14:00:58 Mon, Jan 21, 2013|
+|HuntTheWumpus.AllRequirements.IterationOne.NavigatePlayer.DonutMap||12:17:11 Mon, Jan 21, 2013|
+|HuntTheWumpus.AllRequirements.IterationOne.NavigatePlayer||11:44:59 Mon, Jan 21, 2013|
 |HuntTheWumpus||14:00:55 Fri, Nov 28, 2008|
 |HuntTheWumpus.AllRequirements.IterationOne.BatTransportRandomly||10:47:18 Tue, Sep 04, 2007|
 |FrontPage||16:11:24 Mon, Sep 03, 2007|
@@ -13,7 +16,6 @@
 |DateBook.AllRequirements.AppointmentStories||22:43:10 Sun, May 14, 2006|
 |HuntTheWumpus.AllRequirements.IterationOne.NavigatePlayer.TestInvalidCommand||22:39:30 Sun, May 14, 2006|
 |HuntTheWumpus.AllRequirements.IterationOne.ArrowS||22:39:04 Sun, May 14, 2006|
-|HuntTheWumpus.AllRequirements.IterationOne.NavigatePlayer||22:38:24 Sun, May 14, 2006|
 |DateBook.AllRequirements.AppointmentStories.JunkPage||08:03:24 Fri, May 12, 2006|
 |DateBook.AllRequirements.AlarmStories.AppointmentAlarms.TestIfAppointmentAlarmOccurrs||07:35:47 Fri, May 12, 2006|
 |FrontPage.MyPage.TestMultipleHeadSetIncomingCall||06:44:55 Fri, May 12, 2006|
@@ -96,5 +98,3 @@
 |.HuntTheWumpus.AllRequirements.IterationOne.ArrowS.PickUpArrow||15:58:37 Wed, Oct 19, 2005|
 |.HuntTheWumpus.AllRequirements.IterationOne.ArrowS.ShootArrow.CrossMap||15:57:42 Wed, Oct 19, 2005|
 |HuntTheWumpus.AllRequirements.IterationOne.DonutMap||15:17:00 Wed, Oct 19, 2005|
-|HuntTheWumpus.AllRequirements.IterationOne.CrossMap||14:01:37 Wed, Oct 19, 2005|
-|HuntTheWumpus.AllRequirements.IterationOne.NavigatePlayer.TestPossibleDirectionsAreReported||12:03:21 Wed, Oct 19, 2005|

@@ -1,5 +1,14 @@
-!3 !-fit:fit.FitServer-!
-|'''Date: '''|!-1:58:59 PM (CST) on Friday, November 28, 2008-!|
-|'''Command: '''|!-java -cp ../SDBP07/classes:/Users/unclebob/Desktop/SDBP07/HTW2/HTW/classes:/Users/unclebob/Desktop/SDBP07/HTW2/lib/junit-4.3.1.jar:fitnesse.jar:fitlibrary.jar fit.FitServer BobsMacbook.local 8080 5-!|
-|'''Exit code: '''|!-59-!|
-|'''Time elapsed: '''|!-2.176 seconds-!|
+!3 !-fit-!
+|'''Date: '''| 11:06:59 AM (CST) on Monday, January 21, 2013 |
+|'''Test Page: '''|.HuntTheWumpus.AllRequirements.IterationOne|
+|'''Command: '''| !-java -cp fitnesse.jar;"/cygdrive/c/Documents and Settings/Eric/My Documents/Visual Studio 2012/Projects/HuntTheWumpus/HTW/classes";"/cygdrive/c/Documents and Settings/Eric/My Documents/Visual Studio 2012/Projects/HuntTheWumpus/fitlibrary.jar";fitnesse.jar;fitlibrary.jar fit.FitServer Eric-PC 8080 4-! |
+|'''Exit code: '''| -1 |
+|'''Time elapsed: '''| 1.02 seconds |
+
+----
+'''Standard Error:'''
+{{{ Error: Could not find or load main class fit.FitServer
+ }}}
+----
+'''Internal Exception:'''
+{{{ FitClient: external process terminated before a connection could be established. }}}

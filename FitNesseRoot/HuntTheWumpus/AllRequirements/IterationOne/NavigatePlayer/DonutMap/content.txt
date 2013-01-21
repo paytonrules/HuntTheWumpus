@@ -1,4 +1,4 @@
-!|Make map.|
+!|Make map|
 |start|end|direction|
 |1|2|E|
 |2|3|E|

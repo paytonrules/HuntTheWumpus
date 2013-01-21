@@ -1,0 +1,7 @@
+C:\Users\Eric\Documents\Visual Studio 2012\Projects\HuntTheWumpus\HuntTheWumpusDotNet\HuntTheWumpusDotNet\bin\Debug\HuntTheWumpusDotNet.dll
+C:\Users\Eric\Documents\Visual Studio 2012\Projects\HuntTheWumpus\HuntTheWumpusDotNet\HuntTheWumpusDotNet\bin\Debug\HuntTheWumpusDotNet.pdb
+C:\Users\Eric\Documents\Visual Studio 2012\Projects\HuntTheWumpus\HuntTheWumpusDotNet\HuntTheWumpusDotNet\obj\Debug\HuntTheWumpusDotNet.dll
+C:\Users\Eric\Documents\Visual Studio 2012\Projects\HuntTheWumpus\HuntTheWumpusDotNet\HuntTheWumpusDotNet\obj\Debug\HuntTheWumpusDotNet.pdb
+C:\Users\Eric\Documents\Visual Studio 2012\Projects\HuntTheWumpus\HuntTheWumpusDotNet\HuntTheWumpusDotNet\bin\Debug\fit.dll
+C:\Users\Eric\Documents\Visual Studio 2012\Projects\HuntTheWumpus\HuntTheWumpusDotNet\HuntTheWumpusDotNet\bin\Debug\fitSharp.dll
+C:\Users\Eric\Documents\Visual Studio 2012\Projects\HuntTheWumpus\HuntTheWumpusDotNet\HuntTheWumpusDotNet\obj\Debug\HuntTheWumpusDotNet.csprojResolveAssemblyReference.cache
