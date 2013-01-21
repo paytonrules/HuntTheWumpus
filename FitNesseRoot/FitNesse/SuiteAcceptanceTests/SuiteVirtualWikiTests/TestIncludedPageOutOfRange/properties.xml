@@ -1,11 +1,10 @@
 <?xml version="1.0"?>
 <properties>
 	<Files/>
-	<LastModified>20070523113522</LastModified>
+	<LastModified>20081213072259</LastModified>
 	<RecentChanges/>
 	<Test/>
 	<WhereUsed/>
-	<WikiImport>
-		<Source>http://docs.fitnesse.org:80/FitNesse.SuiteAcceptanceTests.SuiteVirtualWikiTests.TestIncludedPageOutOfRange</Source>
-	</WikiImport>
+	<saveId>1229174579492</saveId>
+	<ticketId>6672562401416929673</ticketId>
 </properties>

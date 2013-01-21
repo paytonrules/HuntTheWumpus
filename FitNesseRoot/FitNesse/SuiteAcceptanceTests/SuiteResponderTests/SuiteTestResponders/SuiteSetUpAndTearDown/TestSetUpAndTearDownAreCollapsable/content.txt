@@ -14,10 +14,10 @@
 
  * Ensure that the setup and and teardown text appear in the test page along with the header and footer.
 |Response Examiner.|
-|type|pattern|matches?|value|
+|type|pattern|matches?|wrapped html?|
 |contents|.*(set up).*(test).*(tear down).*|true||
 
 !|Response Examiner.|
 |type|pattern|matches?|
-|contents|<div.*class="collapsable".*>set up</div>|true|
-|contents|<div.*class="collapsable".*>tear down</div>|true|
+|contents|<div class="collapsible closed">.*<div>set up</div>|true|
+|contents|<div class="collapsible closed">.*<div>tear down</div>|true|

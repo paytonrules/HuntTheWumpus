@@ -1,13 +1,13 @@
-!3 BUG.  There was a problem when moving a page that was three or more levels down from the root.  Moving A.B.C to A.D.  
+!3 BUG.  There was a problem when moving a page that was three or more levels down from the root.  Moving A.B.C to A.D.
 
-First build a page, a subpage to move, and a target page to move it to. 
+First build a page, a subpage to move, and a target page to move it to.
 
-|Page creator.|
-|Page name.                        |Page contents.            |valid?|
-|!-ParentPageAy-!                |!-^ChildBee-!           |true   |
-|!-ParentPageAy.ChildBee-!         |!-^ChildCee-!           |true   |
-|!-ParentPageAy.ChildDee-!         |page D                  |true   |
-|!-ParentPageAy.ChildBee.ChildCee-!|page C                  |true   |
+!|Page creator.|
+|Page name.                    |Page contents.     |valid?|
+|ParentPageAy                  |>ChildBee          |true   |
+|ParentPageAy.ChildBee         |>ChildCee          |true   |
+|ParentPageAy.ChildDee         |page D             |true   |
+|ParentPageAy.ChildBee.ChildCee|page C             |true   |
 
 The bug seems to make !-ChildBee-! disapear, so let's see if it's there now.
 
@@ -19,7 +19,7 @@ Then move the sub page.
 
 |Response Requester.|
 |uri   |status?|
-|!-ParentPageAy.ChildBee.ChildCee?responder=movePage&newLocation=ParentPageAy.ChildDee-!||
+|!-ParentPageAy.ChildBee.ChildCee?responder=movePage&newLocation=ParentPageAy.ChildDee&refactorReferences=on-!||
 
 Next fetch old parent page and make sure the reference has been changed.
 
@@ -28,11 +28,13 @@ Next fetch old parent page and make sure the reference has been changed.
 |!-ParentPageAy.ChildBee-!|true||
 
 |Response Examiner.|
-|type  |pattern|matches?|value|
+|type  |pattern|matches?|wrapped html?|
 |contents|!-ParentPageAy.ChildDee.ChildCee-!|true||
 
-Make sure we can't get the old A.B.C page.
+Make sure we can't get the old A.B.C page. Use the !-dontCreatePage-! query to suppress default creation of a non-existent page.
 
 |Response Requester.|
 |uri|valid?|status?|
-|!-ParentPageAy.ChildBee.ChildCee-!|false||
+|!-ParentPageAy.ChildBee.ChildCee?getPage&dontCreatePage-!|false|404|
+
+

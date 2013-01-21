@@ -1,8 +1,7 @@
 <?xml version="1.0"?>
 <properties>
-	<Edit/>
 	<Files/>
-	<LastModified>20070523113523</LastModified>
+	<LastModified>20081213071135</LastModified>
 	<Properties/>
 	<RecentChanges/>
 	<Refactor/>
@@ -10,7 +9,6 @@
 	<Test/>
 	<Versions/>
 	<WhereUsed/>
-	<WikiImport>
-		<Source>http://docs.fitnesse.org:80/FitNesse.SuiteAcceptanceTests.SuiteResponderTests.SuiteRenameResponder.TestRenamePageWithSubpageReference</Source>
-	</WikiImport>
+	<saveId>1229173895549</saveId>
+	<ticketId>-8056489792305985117</ticketId>
 </properties>

@@ -1,4 +1,4 @@
-!3 A page may ''not'' be renamed to a name with dots in it. 
+!3 A page may ''not'' be renamed to a name with dots in it.
 !3 Another way of saying this is that renaming a page does not change it's position.
 
 First build the page to rename, and another page to try to move it beneath.
@@ -17,14 +17,14 @@ Then rename that page.
 Make sure that we got an error message.
 
 |Response Examiner.|
-|type  |pattern|matches?|value|
+|type  |pattern|matches?|wrapped html?|
 |contents|Cannot rename|true||
 
 The renamed page should not exist.
 
-|Response Requester.|
+!|Response Requester.|
 |uri|valid?|
-|!-TargetPage.SomePage-!|false|
+|TargetPage.SomePage?getPage&dontCreatePage|false|
 
 The old page should still exist.
 

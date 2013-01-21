@@ -1,16 +1,15 @@
 <?xml version="1.0"?>
 <properties>
-	<Edit/>
-	<Files/>
-	<LastModified>20070523113523</LastModified>
-	<Properties/>
-	<RecentChanges/>
-	<Refactor/>
-	<Search/>
-	<Test/>
-	<Versions/>
-	<WhereUsed/>
-	<WikiImport>
-		<Source>http://docs.fitnesse.org:80/FitNesse.SuiteAcceptanceTests.SuiteResponderTests.SuiteRenameResponder.TestRenameChildPageWithSiblingReference</Source>
-	</WikiImport>
+  <Files/>
+  <LastModified>20081020135127</LastModified>
+  <LastModifyingUser>docs</LastModifyingUser>
+  <Properties/>
+  <RecentChanges/>
+  <Refactor/>
+  <Search/>
+  <Test/>
+  <Versions/>
+  <WhereUsed/>
+  <saveId>1153177659589</saveId>
+  <ticketId>-7332162283628447721</ticketId>
 </properties>

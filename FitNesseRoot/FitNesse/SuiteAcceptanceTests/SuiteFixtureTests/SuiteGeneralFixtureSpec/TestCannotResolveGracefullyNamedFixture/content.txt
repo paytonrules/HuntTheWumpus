@@ -7,10 +7,9 @@
 |Action fixture|
 |start|Page builder|
 |enter|attributes|Test=true|
-|enter|line|!-!path ./classes-!|
-|enter|line|!-!path ./fitnesse.jar-!|
+|enter|line|${SUT_PATH} |
 |enter|line|!-|Import|-!|
-|enter|line|!-|fitnesse.fixtures|-!|
+|enter|line|!-|fit.testFxtr|-!|
 |enter|line||
 |enter|line|!-|Would Be|-!|
 |enter|page|!-NotFixturePage-!|
@@ -23,4 +22,4 @@
 
 !|Response examiner|
 |type|pattern|matches?|contents?|
-|contents|Class fitnesse.fixtures.WouldBeFixture is not a fixture.|true||
+|contents|Class fit.testFxtr.WouldBeFixture is not a fixture.|true||

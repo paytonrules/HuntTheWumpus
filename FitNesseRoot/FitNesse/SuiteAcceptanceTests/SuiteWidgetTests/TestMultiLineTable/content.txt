@@ -7,11 +7,11 @@ A multi-line table is created as follows {{{|a|b|c|
 #
  * First create a page with a simple table in it.
 #
-|Action Fixture.|
+|script|
 |start|Page Builder|
-|enter|line|!-|a|b|c|-!|
-|enter|line|!-|d|e|f|-!|
-|enter|page|!-MultiLineTablePage-!|
+|line|!-|a|b|c|-!|
+|line|!-|d|e|f|-!|
+|page|!-MultiLineTablePage-!|
 #
  * Then request that page
 #
@@ -22,18 +22,20 @@ A multi-line table is created as follows {{{|a|b|c|
  * Make sure the html is correct for a simple table.
 #
 |Response Examiner.|
-|type|pattern|matches?|value|
+|type|pattern|matches?|wrapped html?|
 |contents|a|true||
 
 |Response Examiner.|
 |type|number|string?|
-|line|1|!-&lt;table border="1" cellspacing="0">-!|
-|line|2|!-&lt;tr>&lt;td>a&lt;/td>-!|
-|line|3|!-&lt;td>b&lt;/td>-!|
-|line|4|!-&lt;td>c&lt;/td>-!|
-|line|5|!-&lt;/tr>-!|
-|line|6|!-&lt;tr>&lt;td>d&lt;/td>-!|
-|line|7|!-&lt;td>e&lt;/td>-!|
-|line|8|!-&lt;td>f&lt;/td>-!|
-|line|9|!-&lt;/tr>-!|
-|line|10|!-&lt;/table>-!|
+|line|1|!-&lt;table>-!|
+|line|2|!-&lt;tr>-!|
+|line|3|!-&lt;td>a&lt;/td>-!|
+|line|4|!-&lt;td>b&lt;/td>-!|
+|line|5|!-&lt;td>c&lt;/td>-!|
+|line|6|!-&lt;/tr>-!|
+|line|7|!-&lt;tr>-!|
+|line|8|!-&lt;td>d&lt;/td>-!|
+|line|9|!-&lt;td>e&lt;/td>-!|
+|line|10|!-&lt;td>f&lt;/td>-!|
+|line|11|!-&lt;/tr>-!|
+|line|12|!-&lt;/table>-!|

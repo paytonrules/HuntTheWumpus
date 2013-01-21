@@ -1,4 +1,4 @@
-!3 When a page is renamed, any  alias links to that page from sibling pages are changed. 
+!3 When a page is renamed, any  alias links to that page from sibling pages are changed.
 
 First build pages where one refers to the other.
 
@@ -11,7 +11,7 @@ Then rename the target page.
 
 |Response Requester.|
 |uri   |status?|
-|!-TargetPage?responder=renamePage&newName=NewTarget-!||
+|!-TargetPage?responder=renamePage&newName=NewTarget&refactorReferences=on-!||
 
 Next fetch the Source page.
 

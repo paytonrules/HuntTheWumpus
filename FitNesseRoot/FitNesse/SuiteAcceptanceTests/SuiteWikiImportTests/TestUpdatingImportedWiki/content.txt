@@ -6,10 +6,10 @@ Create an importing page.
 |Page name.   |Page contents.|valid?|
 |ImportingPage|!contents   |true   |
 
-This !-ImportingPage-! will now import the !-SampleWiki-! page. 
+This !-ImportingPage-! will now import the !-SampleWiki-! page.
 !|Response Requester.|
 |uri   |valid?|
-|ImportingPage?responder=import&remoteUrl=http://localhost:${PORT}/FitNesse.SampleWiki|true|
+|ImportingPage?responder=import&remoteUrl=http://localhost:${FITNESSE_PORT}/FitNesse.SampleWiki|true|
 
 Now we'll change the content of one of the local pages.
 !|Save Page Requester|
@@ -19,20 +19,20 @@ Now we'll change the content of one of the local pages.
 Update the imported wiki.
 !|Response Requester.|
 |uri   |valid?|
-|ImportingPage?responder=import|true|
+|ImportingPage?responder=import&nochunk=true|true|
 
 The !-ChildPageOne-! page will be listed.
 !|Response Examiner|
-|type|pattern|matches?|value|
-|contents|ChildPageOne|true||
+|type|pattern|matches?|wrapped html?|
+|contents|0 pages were imported|true||
 
 When we view !-ChildPageOne-!...
 !|Response Requester.|
 |uri   |valid?|
 |ImportingPage.ChildPageOne|true|
 
-We'll see the original content and not the changed content
+We'll see the changed content since the page on the server was not modified.
 !|Response Examiner|
 |type|pattern|matches?|
-|contents|child page one|true|
-|contents|3.141592|false|
+|contents|child page one|false|
+|contents|3.141592|true|

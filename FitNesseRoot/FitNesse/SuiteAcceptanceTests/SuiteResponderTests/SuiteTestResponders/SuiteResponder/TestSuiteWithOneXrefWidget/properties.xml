@@ -1,11 +1,13 @@
 <?xml version="1.0"?>
 <properties>
+	<Edit/>
 	<Files/>
-	<LastModified>20070523113523</LastModified>
+	<Help/>
+	<Properties/>
 	<RecentChanges/>
+	<Refactor/>
+	<Suites/>
 	<Test/>
+	<Versions/>
 	<WhereUsed/>
-	<WikiImport>
-		<Source>http://docs.fitnesse.org:80/FitNesse.SuiteAcceptanceTests.SuiteResponderTests.SuiteTestResponders.SuiteResponder.TestSuiteWithOneXrefWidget</Source>
-	</WikiImport>
 </properties>

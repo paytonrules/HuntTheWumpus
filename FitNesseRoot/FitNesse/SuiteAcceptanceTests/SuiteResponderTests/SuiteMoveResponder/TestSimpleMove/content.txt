@@ -23,12 +23,12 @@ Next fetch the moved page.
 Make sure that the sub page can be referenced in it's new location.
 
 |Response Examiner.|
-|type  |pattern|matches?|value|
+|type  |pattern|matches?|wrapped html?|
 |contents|sub page|true||
 
 Make sure that there is no sub page beneath !-ParentPage-!.
 
-|Response Requester.|
+!|Response Requester.|
 |uri|valid?|contents?|
-|!-ParentPage.SubPage-!|false||
+|ParentPage.SubPage?getPage&dontCreatePage|false||
 

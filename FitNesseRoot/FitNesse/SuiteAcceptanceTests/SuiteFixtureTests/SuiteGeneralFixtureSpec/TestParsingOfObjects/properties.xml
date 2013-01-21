@@ -1,16 +1,14 @@
 <?xml version="1.0"?>
 <properties>
-	<Edit/>
-	<Files/>
-	<LastModified>20070523113523</LastModified>
-	<Properties/>
-	<RecentChanges/>
-	<Refactor/>
-	<Search/>
-	<Test/>
-	<Versions/>
-	<WhereUsed/>
-	<WikiImport>
-		<Source>http://docs.fitnesse.org:80/FitNesse.SuiteAcceptanceTests.SuiteFixtureTests.SuiteGeneralFixtureSpec.TestParsingOfObjects</Source>
-	</WikiImport>
+  <Files/>
+  <LastModified>20081020135128</LastModified>
+  <Properties/>
+  <RecentChanges/>
+  <Refactor/>
+  <Search/>
+  <Test/>
+  <Versions/>
+  <WhereUsed/>
+  <saveId>1165041374300</saveId>
+  <ticketId>-4287311746097088003</ticketId>
 </properties>

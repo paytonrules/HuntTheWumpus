@@ -1,4 +1,4 @@
-!3 When a page is renamed, any alias links that use absolute references to subpages are changed. 
+!3 When a page is renamed, any alias links that use absolute references to subpages are changed.
 
 First build parent & child pages where one refers to the other.
 
@@ -11,7 +11,7 @@ Then rename the target page.
 
 |Response Requester.|
 |uri   |status?|
-|!-ParentPage.ChildPage?responder=renamePage&newName=NewChild-!||
+|!-ParentPage.ChildPage?responder=renamePage&newName=NewChild&refactorReferences=on-!||
 
 Next fetch the Source page.
 

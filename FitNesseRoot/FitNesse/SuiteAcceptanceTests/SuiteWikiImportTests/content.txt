@@ -5,10 +5,6 @@ Wiki Import is meant to replace the existing Virtual Wiki feature.
 
 !note make sure to define PORT {80} in root.
 
-^TestPropertiesPageHasImportForm
-^TestImportingSampleWiki
-^TestPropertiesPageHasUpdateForm
-^TestUpdatingImportedWiki
-^TestCantImportFromSecureWiki
-^TestImportFromSecureWikiWithCredentials
-^TestImportingUnicodeCharacters
+!contents
+
+!define TEST_SYSTEM {slim}

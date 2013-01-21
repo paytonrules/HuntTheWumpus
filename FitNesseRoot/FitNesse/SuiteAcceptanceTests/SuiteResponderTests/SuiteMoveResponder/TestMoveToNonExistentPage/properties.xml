@@ -1,8 +1,7 @@
 <?xml version="1.0"?>
 <properties>
-	<Edit/>
 	<Files/>
-	<LastModified>20070523113523</LastModified>
+	<LastModified>20081213070714</LastModified>
 	<Properties/>
 	<RecentChanges/>
 	<Refactor/>
@@ -10,7 +9,6 @@
 	<Test/>
 	<Versions/>
 	<WhereUsed/>
-	<WikiImport>
-		<Source>http://docs.fitnesse.org:80/FitNesse.SuiteAcceptanceTests.SuiteResponderTests.SuiteMoveResponder.TestMoveToNonExistentPage</Source>
-	</WikiImport>
+	<saveId>1229173634771</saveId>
+	<ticketId>8938240666381501125</ticketId>
 </properties>

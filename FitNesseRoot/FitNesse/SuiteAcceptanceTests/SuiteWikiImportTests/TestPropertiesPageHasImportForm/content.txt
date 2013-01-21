@@ -13,11 +13,10 @@ Request the properties view of this page.
 
 Now lets look at the form.
 !|Response Examiner|
-|type|pattern|matches?|value|
+|type|pattern|matches?|wrapped html?|
 |contents|Wiki Import.|true||
 
 !|Response Examiner|
 |type|pattern|matches?|
-|contents|<form .* action="ImportingPage#end"|true|
 |contents|<input .* name="remoteUrl"|true|
-|contents|<input .* value="Import"|true|
+|contents|<input .* type="submit" .* value="Import"|true|

@@ -13,7 +13,7 @@ Then move the sub page.
 
 |Response Requester.|
 |uri   |status?|
-|!-ParentPage.SubPage?responder=movePage&newLocation=NewParentPage-!||
+|!-ParentPage.SubPage?responder=movePage&newLocation=NewParentPage&refactorReferences=on-!||
 
 Make sure that the refering page now !includes the old page at the new location.
 
@@ -22,7 +22,7 @@ Make sure that the refering page now !includes the old page at the new location.
 |!-ReferingPage-!|true||
 
 |Response Examiner.|
-|type  |pattern|matches?|value|
+|type  |pattern|matches?|wrapped html?|
 |contents|!-.NewParentPage.SubPage-!|true||
 
 |Response Examiner.|

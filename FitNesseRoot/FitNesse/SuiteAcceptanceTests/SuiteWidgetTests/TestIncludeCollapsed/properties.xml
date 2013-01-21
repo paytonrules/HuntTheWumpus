@@ -1,12 +1,11 @@
 <?xml version="1.0"?>
 <properties>
 	<Files/>
-	<LastModified>20070523113522</LastModified>
-	<Properties/>
+	<Help></Help>
 	<RecentChanges/>
+	<Suites/>
 	<Test/>
 	<WhereUsed/>
-	<WikiImport>
-		<Source>http://docs.fitnesse.org:80/FitNesse.SuiteAcceptanceTests.SuiteWidgetTests.TestIncludeCollapsed</Source>
-	</WikiImport>
+	<saveId>1224985151218</saveId>
+	<ticketId>1162019334740908922</ticketId>
 </properties>

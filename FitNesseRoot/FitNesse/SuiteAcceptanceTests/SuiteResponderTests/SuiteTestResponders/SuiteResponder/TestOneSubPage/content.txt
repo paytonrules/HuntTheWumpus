@@ -1,22 +1,19 @@
-When you execute a suite page, !-FitNesse-! tests all the subpages.  
-This example shows just one test subpage being executed. 
+When you execute a suite page, !-FitNesse-! tests all the subpages.
+This example shows just one test subpage being executed.
 
 ----
 
 Create a Suite page
 
-|Action Fixture.|
-|start|Page Builder|
-|enter|line|!-!path classes-!|
-|enter|line|!-!path fitnesse.jar-!|
-|enter|page|!-SuitePage-!|
+|script|Page Builder|
+|line|${SUT_PATH}|
+|page|!-SuitePage-!|
 
 Create a simple test page
 
-|Action Fixture.|
-|start|Page Builder|
-|enter|line|!-|!-fitnesse.testutil.PassFixture-!-!!-|-!|
-|enter|page|!-SuitePage.TestPage-!|
+|script|Page Builder|
+|line|!-|!-fitnesse.testutil.PassFixture-!-!!-|-!|
+|page|!-SuitePage.TestPage-!|
 
 Now run the suite page.
 

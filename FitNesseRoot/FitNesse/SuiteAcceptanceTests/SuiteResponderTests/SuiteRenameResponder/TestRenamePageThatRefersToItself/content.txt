@@ -1,4 +1,4 @@
-!3 When a page is renamed, any internal links to that page are changed. 
+!3 When a page is renamed, any internal links to that page are changed.
 
 If you have a page that refers to itself, then its internal references will be changed.
 
@@ -12,7 +12,7 @@ Then rename that page.
 
 |Response Requester.|
 |uri   |status?|
-|!-MyPage?responder=renamePage&newName=ThePage-!||
+|!-MyPage?responder=renamePage&newName=ThePage&refactorReferences=on-!||
 
 Next fetch the page.
 
@@ -23,7 +23,7 @@ Next fetch the page.
 Make sure that the new name is present and that the old name is not.
 
 |Response Examiner.|
-|type  |pattern|matches?|value|
+|type  |pattern|matches?|wrapped html?|
 |contents|!-ThePage-!|true||
 
 |Response Examiner.|

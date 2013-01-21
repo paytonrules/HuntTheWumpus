@@ -15,7 +15,7 @@ Then move the sub page.
 
 |Response Requester.|
 |uri   |status?|
-|!-ParentPageAy.ChildBee.ChildCee?responder=movePage&newLocation=ParentPageAy.ChildDee-!||
+|!-ParentPageAy.ChildBee.ChildCee?responder=movePage&newLocation=ParentPageAy.ChildDee&refactorReferences=on-!||
 
 Next fetch reference page and make sure the reference has been changed.
 
@@ -24,14 +24,14 @@ Next fetch reference page and make sure the reference has been changed.
 |!-ReferencePage-!|true||
 
 |Response Examiner.|
-|type  |pattern|matches?|value|
+|type  |pattern|matches?|wrapped html?|
 |contents|!-ParentPageAy.ChildDee.ChildCee.ChildEee-!|true||
 
 Make sure we can't get the old A.B.C page.
 
-|Response Requester.|
+!|Response Requester.|
 |uri|valid?|status?|
-|!-ParentPageAy.ChildBee.ChildCee-!|false||
+|ParentPageAy.ChildBee.ChildCee?getPage&dontCreatePage|false||
 
 Make sure we ''can'' get the A.D.C.E page at it's new location.
 

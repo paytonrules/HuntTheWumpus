@@ -12,14 +12,14 @@ Create an importing page.
 |Page name.   |Page contents.|valid?|
 |ImportingPage|!contents   |true   |
 
-This !-ImportingPage-! will now import the !-SampleWiki-! page. 
+This !-ImportingPage-! will now import the !-SampleWiki-! page.
 !|Response Requester.|
 |uri   |valid?|
-|ImportingPage?responder=import&remoteUrl=http://localhost:${PORT}/FitNesse.SampleWiki|true|
+|ImportingPage?responder=import&remoteUrl=http://localhost:${FITNESSE_PORT}/FitNesse.SampleWiki|true|
 
 The above request will initiate a chunked response where all the imported pages are listed.
 !|Response Examiner|
-|type|pattern|matches?|value|
+|type|pattern|matches?|wrapped html?|
 |contents|ChildPageOne|true||
 
 !|Response Examiner|

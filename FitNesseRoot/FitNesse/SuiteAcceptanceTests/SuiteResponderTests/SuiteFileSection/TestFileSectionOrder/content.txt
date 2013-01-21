@@ -16,8 +16,8 @@ Add some files
 |aDir|dir|true|
 
 Verify that it's present through the file system
-|file section directory listing|
-|path?|
+|query:file section directory listing|
+|path|
 |aFile.txt|
 |bFile.txt|
 |cFile.txt|
@@ -33,14 +33,14 @@ Now request the directory through fitnesse
 |files/|true||
 
 |Response Examiner|
-|value|inOrder?|
+|line|inOrder?|
 |<a href="aDir/">|true|
 |<a href="bDir/">|true|
 |<a href="cDir/">|true|
 |<a href="dDir/">|true|
-|<a href="aFile.txt">aFile.txt</a>|true|
-|<a href="bFile.txt">bFile.txt</a>|true|
-|<a href="cFile.txt">cFile.txt</a>|true|
-|<a href="dFile.txt">dFile.txt</a>|true|
+|<a href="aFile.txt">|true|
+|<a href="bFile.txt">|true|
+|<a href="cFile.txt">|true|
+|<a href="dFile.txt">|true|
 
 |file section|teardown|

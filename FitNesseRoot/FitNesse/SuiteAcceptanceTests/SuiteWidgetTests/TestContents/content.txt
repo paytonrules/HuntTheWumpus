@@ -1,22 +1,11 @@
 !3 !-!contents-!
-'''Use !contents to list all the child pages of the current page. You can also use the "-R" option to include all of the descendent pages* (see TestContentsWithRecursion)'''
 
-'''First create the parent page.'''
-|Action Fixture.|
-|start|Page Builder|
-|enter|line|I'm the parent|
-|enter|line|!-!contents-!|
-|enter|page|!-ParentPage-!|
+Ensure the contents widget builds links to child pages.
 
-!include -seamless ContentsTestsInclude
-'''Then request the parent page.'''
-|Response Requester.|
-|uri|valid?|contents?|
-|!-ParentPage-!|true||
+!|script|
+|given page|ParentPage|with content|!contents|
+|given page|ParentPage.FirstChild|
+|given page|ParentPage.SecondChild|
+|page|ParentPage|should have link to|ParentPage.FirstChild|
+|and it should have link to|ParentPage.SecondChild|
 
-'''...and examine the requested page to be sure that the child pages are included'''
-#
-!|Response Examiner.|
-|type|pattern|matches?|
-|contents|<a href="ParentPage.FirstChild">FirstChild</a>|true|
-|contents|<a href="ParentPage.SecondChild">SecondChild</a>|true|

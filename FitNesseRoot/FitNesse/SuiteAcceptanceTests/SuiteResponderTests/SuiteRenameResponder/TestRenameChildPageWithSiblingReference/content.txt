@@ -1,4 +1,4 @@
-!3 When a page is renamed, any links to that page from subpages pages are changed. 
+!3 When a page is renamed, any links to that page from subpages pages are changed.
 
 First build parent & child pages where one refers to the other.
 
@@ -12,7 +12,7 @@ Then rename the target page.
 
 |Response Requester.|
 |uri   |status?|
-|!-ParentPage.SisterPage?responder=renamePage&newName=NewSister-!||
+|!-ParentPage.SisterPage?responder=renamePage&newName=NewSister&refactorReferences=on-!||
 
 Next fetch the Source page.
 

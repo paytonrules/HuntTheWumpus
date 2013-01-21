@@ -2,10 +2,10 @@
 #
  * First create a page with comment text on it.
 #
-|Action Fixture.|
+|script|
 |start|Page Builder|
-|enter|line|!-|1 Row 1 Cell|-!|
-|enter|page|!-TableTestPage-!|
+|line|!-|1 Row 1 Cell|-!|
+|page|!-TableTestPage-!|
 #
  * Then request that page
 #
@@ -16,14 +16,14 @@
  * Examine the page to be sure it is empty.
 #
 |Response Examiner.|
-|type|pattern|matches?|value|
+|type|pattern|matches?|wrapped html?|
 |contents|<table.*<tr>\s*<td>\s*1 Row 1 Cell\s*</td>\s*</tr>\s*</table>|true||
 
 '''Test that spaces inside table cells don't get interpreted.'''
-|Action Fixture.|
+|script|
 |start|Page Builder|
-|enter|line|!-| 1 is not a list|-!|
-|enter|page|!-TableTestPageTwo-!|
+|line|!-| 1 is not a list|-!|
+|page|!-TableTestPageTwo-!|
 #
 #
 |Response Requester.|
@@ -32,20 +32,20 @@
 #
 #
 |Response Examiner.|
-|type|pattern|matches?|value|
+|type|pattern|matches?|wrapped html?|
 |contents|1 is not a list|true||
 #
 |Response Examiner.|
 |type|pattern|matches?|
 |contents|<ol>|false|
-|contents|<li>|false|
+|contents|1 is not a list|true|
 #
 
 '''Test that nothing gets interpreted inside literal tables.'''
-|Action Fixture.|
+|script|
 |start|Page Builder|
-|enter|line|!-!|'''bold'''|''italic''|-!|
-|enter|page|!-TableTestPageThree-!|
+|line|!-!|'''bold'''|''italic''|-!|
+|page|!-TableTestPageThree-!|
 #
 #
 |Response Requester.|
@@ -54,7 +54,7 @@
 #
 #
 |Response Examiner.|
-|type|pattern|matches?|value|
+|type|pattern|matches?|wrapped html?|
 |contents|!-'''bold'''-!|true||
 #
 |Response Examiner.|

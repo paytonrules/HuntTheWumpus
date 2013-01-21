@@ -1,16 +1,12 @@
 <?xml version="1.0"?>
 <properties>
-	<Edit/>
-	<Files/>
-	<LastModified>20070523113523</LastModified>
-	<Properties/>
-	<RecentChanges/>
-	<Refactor/>
-	<Search/>
-	<Suite/>
-	<Versions/>
-	<WhereUsed/>
-	<WikiImport>
-		<Source>http://docs.fitnesse.org:80/FitNesse.SuiteAcceptanceTests.SuiteSymbolicLinkTests</Source>
-	</WikiImport>
+  <Files/>
+  <Help/>
+  <LastModified>20071209232537</LastModified>
+  <RecentChanges/>
+  <Suite/>
+  <Suites/>
+  <WhereUsed/>
+  <saveId>1197260737340</saveId>
+  <ticketId>159061011507139978</ticketId>
 </properties>
