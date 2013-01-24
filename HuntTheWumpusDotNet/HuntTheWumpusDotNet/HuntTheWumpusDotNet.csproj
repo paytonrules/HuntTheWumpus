@@ -46,12 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Direction.cs" />
+    <Compile Include="Commands.cs" />
+    <Compile Include="Display.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="fixtures\GameDriver.cs" />
     <Compile Include="fixtures\MakeMap.cs" />
     <Compile Include="GamePresenter.cs" />
     <Compile Include="Map.cs" />
+    <Compile Include="Presenter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

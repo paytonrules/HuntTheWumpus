@@ -2,19 +2,42 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using fit;
+using fitlibrary;
 
 namespace HuntTheWumpusDotNet.fixtures
 {
-    public class GameDriver : ActionFixture
+    public class MockDisplay : Display
+    {
+        public List<String> messages;
+
+        public MockDisplay()
+        {
+            messages = new List<String>();
+        }
+
+        public void WriteMessage(string message)
+        {
+            messages.Add(message);
+        }
+
+        public String LastMessage()
+        {
+            return messages.Last();
+        }
+    }
+
+    public class GameDriver : DoFixture
     {
         public static Game WumpusGame;
         public static GamePresenter Presenter;
+        private readonly MockDisplay mockDisplay;
 
         public GameDriver()
         {
-            WumpusGame = new Game();
-            Presenter = new GamePresenter(WumpusGame);
+            mockDisplay = new MockDisplay();
+            Presenter = new GamePresenter(mockDisplay);
+            WumpusGame = new Game(Presenter);
+            Presenter.Game = WumpusGame;
         }
 
         public void putInCavern(String player, int cavern)
@@ -22,14 +45,22 @@ namespace HuntTheWumpusDotNet.fixtures
             WumpusGame.PutPlayerInCavern(cavern);
         }
 
-        public void enterCommand(char command)
+        public bool enterCommand(String command)
         {
-            Presenter.Move(command);
+            return Presenter.CommandPlayer(command);
         }
 
-        public bool cavernHas(int cavern, String player)
+        public String cavernHas(int cavern)
         {
-            return cavern == WumpusGame.CurrentCavern;
+            if (cavern == WumpusGame.CurrentCavern)
+                return "player";
+
+            return "";
+        }
+
+        public String messageWasPrinted()
+        {
+            return mockDisplay.LastMessage();
         }
     }
 }

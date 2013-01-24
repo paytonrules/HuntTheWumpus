@@ -1,33 +1,7 @@
 !3 !-fit-!
-|'''Date: '''| 2:00:35 PM (CST) on Monday, January 21, 2013 |
+|'''Date: '''| 7:17:55 PM (CST) on Monday, January 21, 2013 |
 |'''Test Page: '''|.HuntTheWumpus.AllRequirements.IterationOne.NavigatePlayer|
-|'''Command: '''| !-"C:\Users\Eric\Documents\Visual Studio 2012\Projects\HuntTheWumpus\fitsharp\Runner.exe" -r fitnesse.fitserver.FitServer,"C:\Users\Eric\Documents\Visual Studio 2012\Projects\HuntTheWumpus\fitsharp\fit.dll" "C:\Users\Eric\Documents\Visual Studio 2012\Projects\HuntTheWumpus\HuntTheWumpusDotNet\HuntTheWumpusDotNet\bin\Debug";fitnesse.jar;fitlibrary.jar Eric-PC 8081 6-! |
-|'''Exit code: '''| -1 |
-|'''Time elapsed: '''| 1.007 seconds |
+|'''Command: '''| !-"C:\Users\Eric\Documents\Visual Studio 2012\Projects\HuntTheWumpus\fitsharp\Runner.exe" -r fitnesse.fitserver.FitServer,"C:\Users\Eric\Documents\Visual Studio 2012\Projects\HuntTheWumpus\fitsharp\fit.dll" "C:\Users\Eric\Documents\Visual Studio 2012\Projects\HuntTheWumpus\HuntTheWumpusDotNet\HuntTheWumpusDotNet\bin\Debug\HuntTheWumpusDotNet.dll";fitnesse.jar;fitlibrary.jar Eric-PC 8081 26-! |
+|'''Exit code: '''| 29 |
+|'''Time elapsed: '''| 2.155 seconds |
 
-----
-'''Standard Output:'''
-{{{ System.IO.FileLoadException: Could not load file or assembly 'file:///C:\Users\Eric\Documents\Visual Studio 2012\Projects\HuntTheWumpus\HuntTheWumpusDotNet\HuntTheWumpusDotNet\bin\Debug' or one of its dependencies. Access is denied.
-File name: 'file:///C:\Users\Eric\Documents\Visual Studio 2012\Projects\HuntTheWumpus\HuntTheWumpusDotNet\HuntTheWumpusDotNet\bin\Debug'
-   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
-   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
-   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
-   at fitSharp.Machine.Engine.CurrentDomain.LoadAssembly(String assemblyPath)
-   at fitSharp.Machine.Engine.ApplicationUnderTest.Assemblies.AddAssembly(String assemblyName)
-   at fitSharp.Machine.Engine.ApplicationUnderTest.AddAssemblies(IEnumerable`1 assemblyNames)
-   at fitnesse.fitserver.FitServer.ParseCommandLineArguments(IEnumerable`1 args)
-   at fitnesse.fitserver.FitServer.Run(IList`1 CommandLineArguments)
-   at fitnesse.fitserver.FitServer.Run(IList`1 commandLineArguments, Memory memory, ProgressReporter reporter)
-   at fitSharp.Machine.Application.Shell.Run()
-   at fitSharp.Machine.Application.Shell.Execute()
-   at fitSharp.Machine.Application.Shell.Run(IList`1 commandLineArguments)
-
-WRN: Assembly binding logging is turned OFF.
-To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
-Note: There is some performance penalty associated with assembly bind failure logging.
-To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
-
- }}}
-----
-'''Internal Exception:'''
-{{{ FitClient: external process terminated before a connection could be established. }}}

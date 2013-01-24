@@ -7,48 +7,52 @@ namespace HuntTheWumpusDotNet
 {
     public class Map
     {
-        private readonly Dictionary<int, Dictionary<Direction, int>> cavernPaths;
+        private readonly Dictionary<int, Dictionary<Command.AllCommands, int>> cavernPaths;
 
         public Map()
         {
-            cavernPaths = new Dictionary<int, Dictionary<Direction, int>>();
+            cavernPaths = new Dictionary<int, Dictionary<Command.AllCommands, int>>();
         }
 
-        public void AddPath(int start, int end, Direction direction)
+        public void AddPath(int start, int end, Command.AllCommands direction)
         {
-            if (!cavernPaths.ContainsKey(start))
-            {
-               cavernPaths[start] = new Dictionary<Direction, int>();
-            }
-            cavernPaths[start][direction] = end;
-
-            if (!cavernPaths.ContainsKey(end))
-            {
-               cavernPaths[end] = new Dictionary<Direction, int>();
-            }
-
-            cavernPaths[end][OppositeDirectionOf(direction)] = start;
+            CavernPathsFor(start)[direction] = end;
+            CavernPathsFor(end)[OppositeDirectionOf(direction)] = start;
         }
 
-        public int Move(int cavern, Direction direction)
+        public bool CanMove(int cavern, Command.AllCommands direction)
         {
-            return cavernPaths[cavern][direction];
+            return CavernPathsFor(cavern).ContainsKey(direction);
         }
 
-        protected Direction OppositeDirectionOf(Direction direction)
+        public int GetCavernForMove(int cavern, Command.AllCommands direction)
+        {
+            return CavernPathsFor(cavern)[direction];
+        }
+
+        protected Dictionary<Command.AllCommands, int> CavernPathsFor(int cavern)
+        {
+            if (!cavernPaths.ContainsKey(cavern))
+            {
+               cavernPaths[cavern] = new Dictionary<Command.AllCommands, int>();
+            }
+            return cavernPaths[cavern];
+        }
+
+        protected Command.AllCommands OppositeDirectionOf(Command.AllCommands direction)
         {
             switch (direction)
             {
-                case Direction.West:
-                    return Direction.East;
-                case Direction.East:
-                    return Direction.West;
-                case Direction.South:
-                    return Direction.North;
-                case Direction.North:
-                    return Direction.South;
+                case Command.AllCommands.West:
+                    return Command.AllCommands.East;
+                case Command.AllCommands.East:
+                    return Command.AllCommands.West;
+                case Command.AllCommands.South:
+                    return Command.AllCommands.North;
+                case Command.AllCommands.North:
+                    return Command.AllCommands.South;
                 default:
-                    return Direction.East;
+                    return Command.AllCommands.East;
             }
         }
     }

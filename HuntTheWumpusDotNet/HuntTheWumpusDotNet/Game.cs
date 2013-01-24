@@ -9,10 +9,12 @@ namespace HuntTheWumpusDotNet
     {
         private readonly Map map;
         public int CurrentCavern { get; set; }
+        private Presenter presenter;
 
-        public Game()
+        public Game(Presenter presenter)
         {
             map = new Map();
+            this.presenter = presenter;
         }
 
         public void PutPlayerInCavern(int cavern)
@@ -20,14 +22,32 @@ namespace HuntTheWumpusDotNet
             CurrentCavern = cavern;
         }
 
-        public void AddPath(int start, int end, Direction direction)
+        public void AddPath(int start, int end, Command.AllCommands direction)
         {
             map.AddPath(start, end, direction);
         }
 
-        public void Move(Direction direction)
+        public bool Do(Command.AllCommands command)
         {
-            CurrentCavern = map.Move(CurrentCavern, direction);
+            if (IsMove(command))
+            {
+                if (map.CanMove(CurrentCavern, command))
+                {
+                    CurrentCavern = map.GetCavernForMove(CurrentCavern, command);
+                    return true;
+                }
+                else
+                {
+                    presenter.InvalidMove(command);
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        public bool IsMove(Command.AllCommands command)
+        {
+            return command >= Command.AllCommands.East && command <= Command.AllCommands.South;
         }
     }
 }

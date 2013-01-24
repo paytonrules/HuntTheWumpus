@@ -1,45 +1,83 @@
-﻿namespace HuntTheWumpusDotNet
+﻿using System;
+
+namespace HuntTheWumpusDotNet
 {
-    public class GamePresenter
+    public class GamePresenter : Presenter
     {
-        private Game game;
-        public GamePresenter(Game game)
+        public Game Game { get; set; }
+        private readonly Display console;
+
+        public GamePresenter(Display console)
         {
-            this.game = game;
+            this.console = console;
         }
 
         public void AddPath(int start, int end, char direction)
         {
-            game.AddPath(start, end, ConvertCharToDirection(direction));
+            Game.AddPath(start, end, ConvertCharToDirection(direction));
         }
 
-        public void Move(char direction)
+        public bool CommandPlayer(String commandString)
         {
-            game.Move(ConvertCharToDirection(direction));
+            var command = ConvertStringToCommand(commandString);
+            
+            if (command == Command.AllCommands.Invalid)
+            {
+                console.WriteMessage(String.Format("I don't know how to {0}.", commandString));
+                return false;
+            }
+
+            return Game.Do(command);
         }
 
-        private static Direction ConvertCharToDirection(char direction)
+        public void InvalidMove(Command.AllCommands command)
         {
-            Direction directionEnum;
+            var message = string.Format("You can't go {0} from here.", ConvertDirectionToString(command));
+            console.WriteMessage(message);
+        }
+
+        private static Command.AllCommands ConvertStringToCommand(String direction)
+        {
+            var convertedString = direction.Trim().ToUpperInvariant();
+            if (convertedString.StartsWith("GO "))
+                convertedString = convertedString.Substring(3);
+
+            var convertedChar = convertedString[0];
+            return ConvertCharToDirection(convertedChar);
+        }
+
+        private static Command.AllCommands ConvertCharToDirection(char direction)
+        {
             switch (direction)
             {
                 case 'E':
-                    directionEnum = Direction.East;
-                    break;
+                    return Command.AllCommands.East;
                 case 'W':
-                    directionEnum = Direction.West;
-                    break;
+                    return Command.AllCommands.West;
                 case 'N':
-                    directionEnum = Direction.North;
-                    break;
+                    return Command.AllCommands.North;
                 case 'S':
-                    directionEnum = Direction.South;
-                    break;
+                    return Command.AllCommands.South;
                 default:
-                    directionEnum = Direction.West;
-                    break;
+                    return Command.AllCommands.Invalid;
             }
-            return directionEnum;
+        }
+
+        private static String ConvertDirectionToString(Command.AllCommands direction)
+        {
+            switch (direction)
+            {
+                case Command.AllCommands.East:
+                    return "east";
+                case Command.AllCommands.West:
+                    return "west";
+                case Command.AllCommands.North:
+                    return "north";
+                case Command.AllCommands.South:
+                    return "south";
+                default:
+                    throw new ArgumentException("Invalid Direction");
+            }
         }
     }
 }
