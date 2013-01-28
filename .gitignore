@@ -1,3 +1,5 @@
 *.zip
 testResults
 _ReSharper*.*/
+HuntTheWumpusDotNet/HuntTheWumpusDotNet/bin
+HuntTheWumpusDotNet/HuntTheWumpusDotNet/obj

@@ -4,5 +4,24 @@ To do this we'll freeze the wumpus so that it doesn't move around.  Then we'll p
 
 !define OBJECT {wumpus}
 !define MESSAGE {You smell the Wumpus.}
-
+!include CrossMap
 !include .HuntTheWumpus.AssertionPages.SenseNearbyHazard
+''Approach from West.''
+
+!| script |
+| the player smells the | ${OBJECT} | in cavern | 1 | when moving | west | from cavern | 3 |
+
+''Approach from North.''
+
+!| script |
+| the player smells the | ${OBJECT} | in cavern | 6 | when moving | north | from cavern | 3 |
+
+''Approach from East.''
+
+!| script |
+| the player smells the | ${OBJECT} | in cavern | 5 | when moving | East | from cavern | 3 |
+
+''Approach from South.''
+
+!| script |
+| the player smells the | ${OBJECT} | in cavern | 9 | when moving | South | from cavern | 3 |

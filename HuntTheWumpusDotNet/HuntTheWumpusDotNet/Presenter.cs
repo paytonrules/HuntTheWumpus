@@ -8,5 +8,7 @@ namespace HuntTheWumpusDotNet
     public interface Presenter
     {
         void InvalidMove(Command.AllCommands command);
+        void DisplayAvailableMoves(List<Command.AllCommands> availableMoves);
+        void WumpusCanSeeYou();
     }
 }

@@ -30,6 +30,12 @@ namespace HuntTheWumpusDotNet
             return CavernPathsFor(cavern)[direction];
         }
 
+        public List<Command.AllCommands> AvailableMoves(int cavern)
+        {
+            var paths = CavernPathsFor(cavern);
+            return new List<Command.AllCommands>(paths.Keys);
+        }
+
         protected Dictionary<Command.AllCommands, int> CavernPathsFor(int cavern)
         {
             if (!cavernPaths.ContainsKey(cavern))

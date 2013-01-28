@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace HuntTheWumpusDotNet
 {
@@ -32,8 +33,45 @@ namespace HuntTheWumpusDotNet
 
         public void InvalidMove(Command.AllCommands command)
         {
-            var message = string.Format("You can't go {0} from here.", ConvertDirectionToString(command));
+            var message = String.Format("You can't go {0} from here.", ConvertDirectionToString(command));
             console.WriteMessage(message);
+        }
+
+        public void DisplayAvailableMoves(List<Command.AllCommands> availableMoves)
+        {
+            console.WriteMessage(String.Format("You can go {0} from here.", MovesAsString(availableMoves)));
+        }
+
+        public void WumpusCanSeeYou()
+        {
+            console.WriteMessage("You smell the Wumpus.");
+        }
+
+        private static String MovesAsString(List<Command.AllCommands> availableMoves)
+        {
+            var availableMovesAsStrings = availableMoves.ConvertAll(ConvertDirectionToString);
+            switch(availableMovesAsStrings.Count)
+            {
+                case 1:
+                    return String.Format("{0}", availableMovesAsStrings[0]);
+                case 2:
+                    return String.Format("{0} and {1}", 
+                                            availableMovesAsStrings[0],
+                                            availableMovesAsStrings[1]);
+                case 3:
+                    return String.Format("{0}, {1} and {2}", 
+                                            availableMovesAsStrings[0],
+                                            availableMovesAsStrings[1], 
+                                            availableMovesAsStrings[2]);
+                case 4:
+                    return String.Format("{0}, {1}, {2} and {3}", 
+                                            availableMovesAsStrings[0],
+                                            availableMovesAsStrings[1], 
+                                            availableMovesAsStrings[2],
+                                            availableMovesAsStrings[3]);
+                default:
+                    return "";
+            }
         }
 
         private static Command.AllCommands ConvertStringToCommand(String direction)
@@ -58,6 +96,8 @@ namespace HuntTheWumpusDotNet
                     return Command.AllCommands.North;
                 case 'S':
                     return Command.AllCommands.South;
+                case 'R':
+                    return Command.AllCommands.Rest;
                 default:
                     return Command.AllCommands.Invalid;
             }

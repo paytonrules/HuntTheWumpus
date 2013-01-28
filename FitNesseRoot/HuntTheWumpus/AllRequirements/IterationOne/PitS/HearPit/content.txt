@@ -1,0 +1,1 @@
+If the player moves into a cavern near a pit, he'll hear wind.

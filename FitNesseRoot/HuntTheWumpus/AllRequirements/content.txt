@@ -1,18 +1,8 @@
 The project will be run in very short iterations.
 
+!define TEST_SYSTEM {slim}
 !path "C:\Users\Eric\Documents\Visual Studio 2012\Projects\HuntTheWumpus\HuntTheWumpusDotNet\HuntTheWumpusDotNet\bin\Debug\HuntTheWumpusDotNet.dll"
-!define COMMAND_PATTERN {%m -r fitnesse.fitserver.FitServer,"C:\Users\Eric\Documents\Visual Studio 2012\Projects\HuntTheWumpus\fitsharp\fit.dll" %p}
+!define COMMAND_PATTERN {%m -r fitSharp.Slim.Service.Runner,"C:\Users\Eric\Documents\Visual Studio 2012\Projects\HuntTheWumpus\fitsharp\fitsharp.dll" %p}
 !define TEST_RUNNER {"C:\Users\Eric\Documents\Visual Studio 2012\Projects\HuntTheWumpus\fitsharp\Runner.exe"}
 
 |'''^IterationOne'''|Current Requirements.|
-
-{{{
-!define TEST_RUNNER {fitlibrary.suite.FitLibraryServer}
-''Change the paths below to the appropriate locations.''
-|''The output directory of the IDE.  The place where all the .class files are created.''|
-!path C:\Users\Eric\Documents\Visual Studio 2012\Projects\HuntTheWumpus\HTW\classes
-'''!path /cygdrive/c/Documents and Settings/Eric/My Documents/Visual Studio 2012/Projects/HuntTheWumpus/HTW/classes
-|''Find fitlibrary in the fitnesse/lib directory''|
-!path C:\Users\Eric\Documents\Visual Studio 2012\Projects\HuntTheWumpus\fitlibrary.jar
-!path C:\Users\Eric\Documents\Visual Studio 2012\Projects\HuntTheWumpus\log4j.jar
-}}}

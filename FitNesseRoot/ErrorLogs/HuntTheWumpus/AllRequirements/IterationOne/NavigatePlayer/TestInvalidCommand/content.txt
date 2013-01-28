@@ -1,11 +1,7 @@
-!3 !-fit-!
-|'''Date: '''| 6:34:25 PM (CST) on Monday, January 21, 2013 |
+!3 !-slim-!
+|'''Date: '''| 12:57:31 AM (CST) on Friday, January 25, 2013 |
 |'''Test Page: '''|.HuntTheWumpus.AllRequirements.IterationOne.NavigatePlayer.TestInvalidCommand|
-|'''Command: '''| !-"C:\Users\Eric\Documents\Visual Studio 2012\Projects\HuntTheWumpus\fitsharp\Runner.exe" -r fitnesse.fitserver.FitServer,"C:\Users\Eric\Documents\Visual Studio 2012\Projects\HuntTheWumpus\fitsharp\fit.dll" "C:\Users\Eric\Documents\Visual Studio 2012\Projects\HuntTheWumpus\HuntTheWumpusDotNet\HuntTheWumpusDotNet\bin\Debug\HuntTheWumpusDotNet.dll";fitnesse.jar;fitlibrary.jar Eric-PC 8081 16-! |
+|'''Command: '''| !-"C:\Users\Eric\Documents\Visual Studio 2012\Projects\HuntTheWumpus\fitsharp\Runner.exe" -r fitSharp.Slim.Service.Runner,"C:\Users\Eric\Documents\Visual Studio 2012\Projects\HuntTheWumpus\fitsharp\fitsharp.dll" "C:\Users\Eric\Documents\Visual Studio 2012\Projects\HuntTheWumpus\HuntTheWumpusDotNet\HuntTheWumpusDotNet\bin\Debug\HuntTheWumpusDotNet.dll";fitnesse.jar;fitlibrary.jar  8089-! |
 |'''Exit code: '''| 0 |
-|'''Time elapsed: '''| 0.757 seconds |
+|'''Time elapsed: '''| 0.799 seconds |
 
-----
-'''Standard Output:'''
-{{{ Z
- }}}

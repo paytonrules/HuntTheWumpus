@@ -1,0 +1,7 @@
+!3 !-slim-!
+|'''Date: '''| 8:32:08 PM (CST) on Sunday, January 27, 2013 |
+|'''Test Page: '''|.FitNesse.UserGuide.SliM.ScenarioTable|
+|'''Command: '''| !-java -cp fitnesse.jar;classes;lib/*.jar;fitnesse.jar;fitlibrary.jar fitnesse.slim.SlimService  8089-! |
+|'''Exit code: '''| 0 |
+|'''Time elapsed: '''| 1.41 seconds |
+

@@ -5,6 +5,7 @@ The quiver should have one less arrow.
 
 !include .HuntTheWumpus.AllRequirements.IterationOne.ArrowS.ShootArrow.CrossMap
 
+!|script|
 |set quiver to|5|
 |put|player|in cavern|3|
 |enter command|shoot east|
@@ -12,16 +13,18 @@ The quiver should have one less arrow.
 |check|arrows in quiver|4|
 |check|arrows in cavern|5|1|
 
+!|script|
 |enter command|shoot south|
 |check|arrows in quiver|3|
 |check|arrows in cavern|9|1|
 
+!|script|
 |enter command|shoot west|
 |check|arrows in quiver|2|
 |check|arrows in cavern|1|1|
 
+!|script|
 |enter command|shoot north|
 |check|arrows in quiver|1|
 |check|arrows in cavern|6|1|
-
 

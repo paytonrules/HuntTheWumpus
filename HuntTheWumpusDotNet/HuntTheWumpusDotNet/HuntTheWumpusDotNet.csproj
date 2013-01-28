@@ -48,11 +48,14 @@
   <ItemGroup>
     <Compile Include="Commands.cs" />
     <Compile Include="Display.cs" />
+    <Compile Include="fixtures\GameEditor.cs" />
+    <Compile Include="fixtures\MessagesPrinted.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="fixtures\GameDriver.cs" />
     <Compile Include="fixtures\MakeMap.cs" />
     <Compile Include="GamePresenter.cs" />
     <Compile Include="Map.cs" />
+    <Compile Include="MapItems.cs" />
     <Compile Include="Presenter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

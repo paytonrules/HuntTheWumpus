@@ -6,11 +6,15 @@ Create a very simple map. [1]-[2]
 |start|end|direction|
 |1|2|E|
 
+!|script|
 |put|player|in cavern|1|
 |set quiver to|1|
 |enter command|shoot west|
-|check|message|The arrow bounced off the wall and killed you.|was printed|true|
-|check|message|Game over.|was printed|true|
-|check|game terminated|true|
 
+|Subset Query: Messages Printed|
+|message|
+|The arrow bounced off the wall and killed you.|
+|Game over.|
 
+!|script|
+|ensure|game terminated|
