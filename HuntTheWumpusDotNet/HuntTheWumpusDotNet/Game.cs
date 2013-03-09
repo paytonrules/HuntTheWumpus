@@ -103,5 +103,9 @@ namespace HuntTheWumpusDotNet
             return null;
         }
 
+        public int ArrowsInCavern(int cavern)
+        {
+            return 0;
+        }
     }
 }

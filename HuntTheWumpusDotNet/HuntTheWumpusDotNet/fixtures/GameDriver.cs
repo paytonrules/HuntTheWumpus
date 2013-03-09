@@ -31,7 +31,7 @@ namespace HuntTheWumpusDotNet.fixtures
         public static Game WumpusGame;
         public static GamePresenter Presenter;
         public static GameEditor Editor;
-        private readonly MockDisplay mockDisplay;
+        public static MockDisplay mockDisplay;
 
         public GameDriver()
         {
@@ -70,14 +70,14 @@ namespace HuntTheWumpusDotNet.fixtures
             return mockDisplay.LastMessage();
         }
 
-        public void freezeWumpus()
-        {
-            
-        }
-
         public void setQuiverTo(int num)
         {
             WumpusGame.Quiver = num;
+        }
+
+        public int arrowsInCavern(int cavern)
+        {
+            return WumpusGame.ArrowsInCavern(cavern);
         }
     }
 }

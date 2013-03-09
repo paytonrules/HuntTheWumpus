@@ -14,7 +14,7 @@ When a player moves into a cavern with arrows in it, he automatically picks thos
 !|script|
 |put|arrow|in cavern|2|
 |enter command|east|
-|check|arrows in cavern|2|0|
+|check|arrows in cavern|2|1|
 
 |Subset Query:messages printed| 
 |message|
