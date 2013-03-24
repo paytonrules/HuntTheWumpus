@@ -1,11 +1,10 @@
 The project will be run in very short iterations.
 
-!*< Boilerplate
 !define TEST_SYSTEM {slim}
 !path "${PWD}\HuntTheWumpusDotNet\HuntTheWumpusDotNet\bin\Debug\HuntTheWumpusDotNet.dll"
 !define COMMAND_PATTERN (%m -r fitSharp.Slim.Service.Runner,"${PWD}\fitsharp\fitsharp.dll" %p)
 
 !define TEST_RUNNER ("${PWD}\fitsharp\Runner.exe")
-*!
+
 
 |'''^IterationOne'''|Current Requirements.|
