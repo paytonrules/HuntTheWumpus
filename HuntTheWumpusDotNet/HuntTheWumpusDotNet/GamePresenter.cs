@@ -3,9 +3,10 @@ using System.Collections.Generic;
 
 namespace HuntTheWumpusDotNet
 {
+
     public class GamePresenter : Presenter
     {
-        public Game Game { get; set; }
+        public GameController Game { get; set; }
         private readonly Display console;
 
         public GamePresenter(Display console)
@@ -13,31 +14,23 @@ namespace HuntTheWumpusDotNet
             this.console = console;
         }
 
-        public void AddPath(int start, int end, char direction)
-        {
-            Game.AddPath(start, end, ConvertCharToDirection(direction));
-        }
-
         public bool CommandPlayer(String commandString)
         {
             var command = ConvertStringToCommand(commandString);
-            
-            if (command == Command.AllCommands.Invalid)
-            {
+            var succesfulCommand = Game.Command(command);
+            if (!succesfulCommand)
                 console.WriteMessage(String.Format("I don't know how to {0}.", commandString));
-                return false;
-            }
 
-            return Game.Do(command);
+            return succesfulCommand;
         }
 
-        public void InvalidMove(Command.AllCommands command)
+        public void InvalidDirection(Command.Directions command)
         {
             var message = String.Format("You can't go {0} from here.", ConvertDirectionToString(command));
             console.WriteMessage(message);
         }
 
-        public void DisplayAvailableMoves(List<Command.AllCommands> availableMoves)
+        public void DisplayAvailableDirections(List<Command.Directions> availableMoves)
         {
             console.WriteMessage(String.Format("You can go {0} from here.", MovesAsString(availableMoves)));
         }
@@ -47,7 +40,59 @@ namespace HuntTheWumpusDotNet
             console.WriteMessage("You smell the Wumpus.");
         }
 
-        private static String MovesAsString(List<Command.AllCommands> availableMoves)
+        public void FoundAnArrow()
+        {
+            console.WriteMessage("You found an arrow.");
+        }
+
+        public void ArrowWasFired()
+        {
+            console.WriteMessage("The arrow flies away in silence.");
+        }
+
+        public void OutOfArrows()
+        {
+            console.WriteMessage("You don't have any arrows.");
+        }
+
+        public void Suicide()
+        {
+            console.WriteMessage("The arrow bounced off the wall and killed you.");
+        }
+
+        public void GameOver()
+        {
+            console.WriteMessage("Game over.");
+        }
+
+        public void Restart()
+        {
+            console.Restart();
+        }
+
+        public void WumpusHasBeenShot()
+        {
+            console.WriteMessage("You have killed the Wumpus.");
+        }
+
+        public void DisplayArrowStatus(int arrows)
+        {
+            switch(arrows)
+            {
+                case 0:
+                    console.WriteMessage("You have no arrows.");
+                    break;
+                case 1:
+                    console.WriteMessage("You have 1 arrow.");
+                    break;
+                default:
+                    console.WriteMessage(String.Format("You have {0} arrows.", arrows));
+                    break;
+            }
+            
+        }
+
+        private static String MovesAsString(List<Command.Directions> availableMoves)
         {
             var availableMovesAsStrings = availableMoves.ConvertAll(ConvertDirectionToString);
             switch(availableMovesAsStrings.Count)
@@ -74,46 +119,92 @@ namespace HuntTheWumpusDotNet
             }
         }
 
-        private static Command.AllCommands ConvertStringToCommand(String direction)
+        private static Command ConvertStringToCommand(String direction)
         {
+            var command = new Command();
             var convertedString = direction.Trim().ToUpperInvariant();
             if (convertedString.StartsWith("GO "))
-                convertedString = convertedString.Substring(3);
+            {
+                command.Order = Command.Commands.Go;
+                var directionString = convertedString.Substring(3);
+                var convertedChar = directionString[0];
+                command.Direction = ConvertCharToDirection(convertedChar);
+                return command;
+            }
 
-            var convertedChar = convertedString[0];
-            return ConvertCharToDirection(convertedChar);
+            if (convertedString.StartsWith("SHOOT "))
+            {
+                command.Order = Command.Commands.Shoot;
+                var directionString = convertedString.Substring(6);
+                var convertedChar = directionString[0];
+                command.Direction = ConvertCharToDirection(convertedChar);
+                return command;
+            }
+
+            if (convertedString.StartsWith("S ") && convertedString.Substring(2).Length > 0)
+            {
+                command.Order = Command.Commands.Shoot;
+                var directionString = convertedString.Substring(2);
+                var convertedChar = directionString[0];
+                command.Direction = ConvertCharToDirection(convertedChar);
+                return command;
+            }
+
+            if (convertedString.StartsWith("S") 
+                && convertedString.Length > 1
+                && convertedString[1] != 'O')
+            {
+                command.Order = Command.Commands.Shoot;
+                var convertedChar = convertedString[1];
+                command.Direction = ConvertCharToDirection(convertedChar);
+                return command;               
+            }
+
+            if ( convertedString.StartsWith("S") ||
+                convertedString.StartsWith("W") ||
+                convertedString.StartsWith("N") ||
+                convertedString.StartsWith("E"))
+            {
+               command.Order = Command.Commands.Go;
+               command.Direction = ConvertCharToDirection(convertedString[0]);
+            }
+
+            if (convertedString.StartsWith("R"))
+            {
+                command.Order = Command.Commands.Rest;
+            }
+
+            return command;
         }
 
-        private static Command.AllCommands ConvertCharToDirection(char direction)
+        public static Command.Directions ConvertCharToDirection(char direction)
         {
-            switch (direction)
+            switch (Char.ToUpper(direction))
             {
                 case 'E':
-                    return Command.AllCommands.East;
+                    return Command.Directions.East;
                 case 'W':
-                    return Command.AllCommands.West;
+                    return Command.Directions.West;
                 case 'N':
-                    return Command.AllCommands.North;
+                    return Command.Directions.North;
                 case 'S':
-                    return Command.AllCommands.South;
-                case 'R':
-                    return Command.AllCommands.Rest;
+                    return Command.Directions.South;
                 default:
-                    return Command.AllCommands.Invalid;
+                    return Command.Directions.Invalid;
             }
         }
 
-        private static String ConvertDirectionToString(Command.AllCommands direction)
+        private static String ConvertDirectionToString(Command.Directions direction)
         {
             switch (direction)
             {
-                case Command.AllCommands.East:
+                case Command.Directions.East:
                     return "east";
-                case Command.AllCommands.West:
+                case Command.Directions.West:
                     return "west";
-                case Command.AllCommands.North:
+                case Command.Directions.North:
                     return "north";
-                case Command.AllCommands.South:
+                case Command.Directions.South:
                     return "south";
                 default:
                     throw new ArgumentException("Invalid Direction");

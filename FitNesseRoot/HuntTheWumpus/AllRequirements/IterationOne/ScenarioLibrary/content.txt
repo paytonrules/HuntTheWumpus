@@ -1,0 +1,7 @@
+|scenario| Player Shoots | playerCavern | Wumpus | wumpusCavern| With Arrow| direction | Ending Game | gameOver |
+| restart game |
+|put|wumpus|in cavern|@wumpusCavern|
+|put|player|in cavern|@playerCavern|
+|set quiver to|5|
+|enter command|s @direction|
+|check|game terminated|@gameOver|

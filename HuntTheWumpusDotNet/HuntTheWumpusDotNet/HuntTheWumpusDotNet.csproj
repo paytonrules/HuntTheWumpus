@@ -37,6 +37,16 @@
     <Reference Include="fitSharp">
       <HintPath>..\..\fitsharp\fitSharp.dll</HintPath>
     </Reference>
+    <Reference Include="NSubstitute">
+      <HintPath>..\packages\NSubstitute.1.5.0.0\lib\NET40\NSubstitute.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.6.2.12296, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NUnit.2.6.2\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Stateless">
+      <HintPath>..\packages\Stateless.2.4.0\lib\Stateless.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -48,16 +58,29 @@
   <ItemGroup>
     <Compile Include="Commands.cs" />
     <Compile Include="Display.cs" />
-    <Compile Include="fixtures\GameEditor.cs" />
+    <Compile Include="fixtures\RandomWumpusMovement.cs" />
+    <Compile Include="HumanPlayer.cs" />
+    <Compile Include="Interactors\MapEditor.cs" />
     <Compile Include="fixtures\MessagesPrinted.cs" />
+    <Compile Include="fixtures\MockDisplay.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="fixtures\GameDriver.cs" />
     <Compile Include="fixtures\MakeMap.cs" />
     <Compile Include="GamePresenter.cs" />
     <Compile Include="Map.cs" />
     <Compile Include="MapItems.cs" />
+    <Compile Include="GameController.cs" />
     <Compile Include="Presenter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RandomWumpusMover.cs" />
+    <Compile Include="UnitTests\GamePresenterTest.cs" />
+    <Compile Include="UnitTests\GameTest.cs" />
+    <Compile Include="UnitTests\MapEditorTest.cs" />
+    <Compile Include="UnitTests\MapTest.cs" />
+    <Compile Include="WumpusMover.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

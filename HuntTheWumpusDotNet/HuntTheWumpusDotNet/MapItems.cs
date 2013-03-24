@@ -8,6 +8,7 @@ namespace HuntTheWumpusDotNet
     public enum MapItems
     {
         Player,
-        Wumpus
+        Wumpus,
+        Arrow
     }
 }

@@ -1,8 +1,11 @@
 The project will be run in very short iterations.
 
+!*< Boilerplate
 !define TEST_SYSTEM {slim}
-!path "C:\Users\Eric\Documents\Visual Studio 2012\Projects\HuntTheWumpus\HuntTheWumpusDotNet\HuntTheWumpusDotNet\bin\Debug\HuntTheWumpusDotNet.dll"
-!define COMMAND_PATTERN {%m -r fitSharp.Slim.Service.Runner,"C:\Users\Eric\Documents\Visual Studio 2012\Projects\HuntTheWumpus\fitsharp\fitsharp.dll" %p}
-!define TEST_RUNNER {"C:\Users\Eric\Documents\Visual Studio 2012\Projects\HuntTheWumpus\fitsharp\Runner.exe"}
+!path "${PWD}\HuntTheWumpusDotNet\HuntTheWumpusDotNet\bin\Debug\HuntTheWumpusDotNet.dll"
+!define COMMAND_PATTERN (%m -r fitSharp.Slim.Service.Runner,"${PWD}\fitsharp\fitsharp.dll" %p)
+
+!define TEST_RUNNER ("${PWD}\fitsharp\Runner.exe")
+*!
 
 |'''^IterationOne'''|Current Requirements.|

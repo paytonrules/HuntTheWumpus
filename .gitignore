@@ -4,3 +4,5 @@ _ReSharper*.*/
 HuntTheWumpusDotNet/HuntTheWumpusDotNet/bin
 HuntTheWumpusDotNet/HuntTheWumpusDotNet/obj
 *.suo
+FitnesseRoot/ErrorLogs
+*.user

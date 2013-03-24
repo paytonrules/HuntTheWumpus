@@ -6,15 +6,18 @@ namespace HuntTheWumpusDotNet.fixtures
     {
         public List<Object> Query()
         {
-            var list = new List<Object>
-                           {
-                               new List<Object>
-                                   {
-                                       new List<String> {"message", "string"}
-                                   }
-                           };
+            var table = new List<Object>();
 
-            return list;
+            foreach(var message in GameDriver.Display.Messages)
+            {
+                var row = new List<Object>();
+
+                var cell = new List<Object> {"message", message};
+                row.Add(cell);
+                table.Add(row);
+            }
+
+            return table;
         }
     }
 } 

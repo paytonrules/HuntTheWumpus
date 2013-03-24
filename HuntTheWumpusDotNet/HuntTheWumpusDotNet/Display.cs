@@ -5,5 +5,6 @@ namespace HuntTheWumpusDotNet
     public interface Display
     {
         void WriteMessage(String message);
+        void Restart();
     }
 }

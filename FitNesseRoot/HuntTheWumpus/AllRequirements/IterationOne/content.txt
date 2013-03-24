@@ -1,9 +1,6 @@
 ^NavigatePlayer
 ^SmellWumpus
 ^ArrowS
-^PitS
 ^KillWumpus
 ^WumpusMovesRandomly
-^BatTransportRandomly
-^HearBats
 

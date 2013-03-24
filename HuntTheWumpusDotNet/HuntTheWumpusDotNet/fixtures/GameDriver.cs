@@ -1,83 +1,78 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using HuntTheWumpusDotNet.Interactors;
 
 namespace HuntTheWumpusDotNet.fixtures
 {
-    public class MockDisplay : Display
-    {
-        public List<String> messages;
-
-        public MockDisplay()
-        {
-            messages = new List<String>();
-        }
-
-        public void WriteMessage(string message)
-        {
-            messages.Add(message);
-        }
-
-        public String LastMessage()
-        {
-            if (messages.Count > 0)
-                return messages.Last();
-            return "";
-        }
-    }
 
     public class GameDriver
     {
         public static Game WumpusGame;
         public static GamePresenter Presenter;
-        public static GameEditor Editor;
-        public static MockDisplay mockDisplay;
+        public static MapEditor Editor;
+        public static MockDisplay Display;
+        public static Map Map;
 
         public GameDriver()
         {
-            mockDisplay = new MockDisplay();
-            Presenter = new GamePresenter(mockDisplay);
-            WumpusGame = new Game(Presenter);
-            Editor = new GameEditor(WumpusGame);
+            Display = new MockDisplay();
+            Presenter = new GamePresenter(Display);
+            Map = new Map();
+            WumpusGame = new Game(Presenter, Map);
+            Editor = new MapEditor(Map);
             Presenter.Game = WumpusGame;
         }
-
-        public void putInCavern(String player, int cavern)
+        
+        public void RestartGame()
         {
-            Editor.PutInCavern(player, cavern);
+            WumpusGame.Restart();
         }
 
-        public bool enterCommand(String command)
+        public void PutInCavern(String item, int cavern)
+        {
+            Editor.PutInCavern(item, cavern);
+        }
+
+        public bool EnterCommand(String command)
         {
             return Presenter.CommandPlayer(command);
         }
 
-        public String cavernHas(int cavern)
+        public string CavernHas(int cavern)
         {
-            var players = WumpusGame.GetPlayersInCavern(cavern);
-            if (players != null)
-                return String.Format("{0}", String.Join(",", players.ConvertAll(item => item.ToString()).ToArray()));
-            return "";
+            return String.Join(",",
+                       Map.ItemsInCavern(cavern).Select(item => item.ToString()));
         }
 
-        public void clearMap()
+        public void freezeWumpus()
         {
-            WumpusGame.ClearMap();
+            
         }
 
-        public String messageWasPrinted()
+        public bool MessageWasPrinted(String message)
         {
-            return mockDisplay.LastMessage();
+            return Display.Messages.Contains(message);
         }
 
-        public void setQuiverTo(int num)
+        public void SetQuiverTo(int num)
         {
-            WumpusGame.Quiver = num;
+            WumpusGame.SetPlayerQuiver(num);
         }
 
-        public int arrowsInCavern(int cavern)
+        public int ArrowsInCavern(int cavern)
         {
-            return WumpusGame.ArrowsInCavern(cavern);
+            return Map.ArrowsInCavern(cavern);
+        }
+
+        public int ArrowsInQuiver()
+        {
+            return WumpusGame.PlayerArrows();
+        }
+
+        public bool GameTerminated()
+        {
+            return WumpusGame.IsOver();
         }
     }
 }

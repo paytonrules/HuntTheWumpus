@@ -10,5 +10,3 @@
 ----
 
 |!3 [[Hunt the Wumpus][HuntTheWumpus]]|''The Hunt the Wumpus specification.''|
-
-!contents

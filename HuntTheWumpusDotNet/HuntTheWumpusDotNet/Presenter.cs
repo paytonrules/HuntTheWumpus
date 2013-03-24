@@ -7,8 +7,16 @@ namespace HuntTheWumpusDotNet
 {
     public interface Presenter
     {
-        void InvalidMove(Command.AllCommands command);
-        void DisplayAvailableMoves(List<Command.AllCommands> availableMoves);
+        void InvalidDirection(Command.Directions command);
+        void DisplayAvailableDirections(List<Command.Directions> availableMoves);
         void WumpusCanSeeYou();
+        void DisplayArrowStatus(int numArrows);
+        void FoundAnArrow();
+        void ArrowWasFired();
+        void OutOfArrows();
+        void Suicide();
+        void GameOver();
+        void Restart();
+        void WumpusHasBeenShot();
     }
 }

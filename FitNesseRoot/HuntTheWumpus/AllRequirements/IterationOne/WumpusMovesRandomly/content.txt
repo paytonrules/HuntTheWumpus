@@ -19,7 +19,7 @@ Now repeat the following 1000 times.
  2 rest
  3 note where the wumpus is.
 
-|Check random wumpus movement|
+|random wumpus movement|
 |cavern|count?|
 |1|>150|
 |2|>150|

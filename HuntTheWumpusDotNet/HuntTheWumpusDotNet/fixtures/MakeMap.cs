@@ -13,7 +13,7 @@ namespace HuntTheWumpusDotNet.fixtures
 
         public void Execute()
         {
-            GameDriver.Presenter.AddPath(Start, End, Direction);
+            GameDriver.Editor.AddPath(Start, End, Direction);
         }
     }
 }

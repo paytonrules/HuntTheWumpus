@@ -6,19 +6,19 @@ A player can rest for his turn.  This is a valid command that does not move the 
 |put|player|in cavern|1|
 |enter command|Rest|
 |check|cavern|1|has|Player|
-|check not|message was printed|I don't know how to Rest.|
+|reject|message was printed|I don't know how to Rest.|
 
 |script|
 |enter command|rest|
 |check|cavern|1|has|Player|
-|check not|message was printed|I don't know how to rest.|
+|reject|message was printed|I don't know how to rest.|
 
 |script|
 |enter command|r|
 |check|cavern|1|has|Player|
-|check not|message was printed|I don't know how to r.|
+|reject|message was printed|I don't know how to r.|
 
 |script|
 |enter command|R|
 |check|cavern|1|has|Player|
-|check not|message was printed|I don't know how to R.|
+|reject|message was printed|I don't know how to R.|

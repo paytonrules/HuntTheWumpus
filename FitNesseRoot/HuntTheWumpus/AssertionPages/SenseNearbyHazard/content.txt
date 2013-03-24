@@ -3,4 +3,4 @@
 |put| @object | in cavern | @cavern |
 |put| player | in cavern | @startingLocation |
 |enter command | @direction |
-|check | message was printed | ${MESSAGE} |
+|ensure| message was printed | ${MESSAGE} |
