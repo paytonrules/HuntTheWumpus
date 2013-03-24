@@ -1,1 +1,0 @@
-If the player enters a cavern that contains a pit, then the player dies and the game is over.
