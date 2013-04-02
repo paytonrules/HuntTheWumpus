@@ -6,3 +6,4 @@ HuntTheWumpusDotNet/HuntTheWumpusDotNet/obj
 *.suo
 FitNesseRoot/ErrorLogs
 *.user
+obj/
