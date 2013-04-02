@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HuntTheWumpusDotNet", "HuntTheWumpusDotNet\HuntTheWumpusDotNet.csproj", "{206AC07C-7AC9-4638-A4DE-F34E6C462B3D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleGame", "ConsoleGame\ConsoleGame.csproj", "{EDA0696F-0A07-48AC-852A-28F741AA0D18}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{206AC07C-7AC9-4638-A4DE-F34E6C462B3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{206AC07C-7AC9-4638-A4DE-F34E6C462B3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{206AC07C-7AC9-4638-A4DE-F34E6C462B3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDA0696F-0A07-48AC-852A-28F741AA0D18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDA0696F-0A07-48AC-852A-28F741AA0D18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDA0696F-0A07-48AC-852A-28F741AA0D18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDA0696F-0A07-48AC-852A-28F741AA0D18}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

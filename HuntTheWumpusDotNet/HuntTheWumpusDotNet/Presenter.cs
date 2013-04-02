@@ -18,5 +18,7 @@ namespace HuntTheWumpusDotNet
         void GameOver();
         void Restart();
         void WumpusHasBeenShot();
+        GameController Game { get; set; }
+        bool CommandPlayer(String commandString);
     }
 }
